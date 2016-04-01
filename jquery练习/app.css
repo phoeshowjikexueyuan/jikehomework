@@ -1,0 +1,32 @@
+ul,li{
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+li{
+    float: left;
+    background: #ccc;
+    margin-right: 1px;
+    padding:10px;
+}
+.cur_selector{
+    width:50px;
+    background: #333;
+
+    color:#fff;
+}
+.content{
+    clear: both;
+    border:1px solid #ccc;
+    background: #ccc;
+    width:250px;
+    height:200px;
+    padding:5px;
+    display: none;
+}
+.cur_content{
+    display: block;
+    border:1px solid #333333;
+    color: #fff;
+    background: #333333;
+}

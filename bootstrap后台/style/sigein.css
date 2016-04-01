@@ -1,0 +1,54 @@
+/*登录页面的样式*/
+
+html{
+    height:100%;
+}
+body {
+    /*设置页面的背景图效果*/
+    height:100%;
+    background: #626262 url("../img/sign-bg.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 10%;
+}
+
+.container form {
+    /*表单部分尺寸和效果的设置*/
+    width: 300px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 10px 5px rgba(20, 20, 20, 0.8);
+}
+
+.container h2 {
+    /*表单中的大标题*/
+    text-align: center;
+}
+
+.wrap_email {
+    /*取消两个文本框之间的粗线*/
+    margin-bottom: -1px;
+}
+
+#InputEmail1 {
+    /*上面的文本框没有下面的圆角*/
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#InputPassword {
+    /*下面的文本框没有上面的圆角*/
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+@media screen and (max-width: 768px){
+    /*自适应屏幕，小于768（iPad）之后输入框就一直据顶部40px*/
+    body {
+    background: #626262 url("../img/sign-bg.jpg") ;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 40px;}
+    
+}

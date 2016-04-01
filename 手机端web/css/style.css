@@ -1,0 +1,256 @@
+/*全局样式*/
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+	background: url("../images/img_03.png" );
+}
+.container{
+	width: 100%;
+	height: 100%;
+	position:relative;
+	/*background: red;*/
+}
+/*自定义字体*/
+@font-face {font-family: "iconfont";
+  src: url('../font/iconfont.eot'); /* IE9*/
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../font/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('../font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+nav span{
+	font-family:"iconfont";
+	
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+ /*自定义字体结束*/
+
+header{
+	height: 30%;
+	position: relative;
+	/*外部容器加个overflow，里面的图片就出不去了*/
+	overflow: hidden;
+}
+article{
+	height: 58%;
+}
+nav{
+	position:absolute;
+	bottom:0;
+	height: 10%;
+	width: 100%;
+	/*min-height: 50px;*/
+}
+/*===============顶部焦点图和选择器==================*/
+.wrap_focusimg{
+	height: 100%;
+}
+header img{
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	
+}
+header .select_bar{
+	height: 25px;
+	width: 100%;
+	background: rgba(255,255,255,0.5);
+	display: block;
+	position: absolute;
+	bottom: 0;
+	/*line-height: 25px;*/
+}
+header .wrap_focus_select{
+	padding-top: 2px;
+	text-align: center;
+}
+header .select_bar a{
+	display: inline-block;
+	height: 18px;
+	width: 18px;
+	border-radius: 50%;
+	background: #fff;
+	text-align: center;
+	margin: 0 5px;
+}
+header .select_bar a:active{
+	background: #5CA3FF;
+}
+/*===============顶部焦点图和选择器end==================*/
+/*==================中部主体开始===================*/
+article{
+	/*去掉中间的间隙*/
+	font-size: 0;
+}
+article section{
+	/*所有的块宽度占一半*/
+	width: 50%;
+	box-sizing: border-box;
+	padding:6px;
+	float: left;
+
+}
+article section div{
+	/*margin: */
+	position:relative;
+	
+
+}
+article section div a{
+	display:block;
+	position:relative;
+	height:100%;
+	text-decoration:none;
+}
+article section div h2{
+	margin:0;
+	padding:10px;
+	font-size:1rem;
+	font-family: arial;
+	font-weight:bold;
+	color:#fff;
+}
+article div img{
+	position:absolute;
+	bottom:0;
+	right:0;
+	height:70%;
+}
+.about{
+	height:30%;
+}
+.about div{
+	background: #ef6d6d;
+	height: 100%;
+}
+
+.action{
+	height:30%;
+}
+.action div{
+	background:#8c22e5;
+	height:100%;
+}
+.action div h2{
+	/*padding-left:70px;*/
+}
+
+.product{
+	height:40%;
+}
+.product div{
+	background:#284a9f;
+	height:100%;
+}
+
+.dev{
+	height:20%;
+}
+.dev div{
+	background:#24ab87;
+	height:100%;
+}
+.cooperation{
+	height:20%;
+}
+.cooperation div{
+	background:#3cb3f1;
+	height:100%;
+}
+#wrap_news_contact{
+	clear: both;
+	height: 30%;
+}
+.news{
+	height:100%;
+}
+.news div{
+	background:#1bc25a;
+	height:100%;
+}
+.contact{
+	height:100%;
+}
+.contact div{
+	background:#efa413;
+	height:100%;
+}
+
+
+nav {
+	clear: both;
+	text-align:center;
+
+}
+nav ul{
+	margin:0;
+	padding:0;
+	font-size:0;
+	height:100%;
+}
+nav ul li{
+	display:inline-block;
+	height:100%;
+	padding-top:3px;
+	width:25%;
+	border-top:1px #fff solid;
+	box-sizing: border-box;
+	background:linear-gradient(#075b95,#0e3342);
+}
+nav li:nth-child(1){
+	border-right:1px solid #1c5b79;
+}
+nav li:nth-child(2){
+	border-right:1px solid #1c5b79;
+	border-left:1px solid #333;
+}
+nav li:nth-child(3){
+	border-right:1px solid #1c5b79;
+	border-left:1px solid #333;
+}
+nav li:nth-child(4){
+	/*border-right:1px solid #1c5b79;*/
+	border-left:1px solid #333;
+}
+nav ul li a{
+	display:block;
+	width:100%;
+	/*height:100%;*/
+	font-size:14px;
+	text-decoration:none;
+	color:#fff;
+}
+nav ul li a span{
+	font-size:25px;
+}
+nav ul li a p{
+	font-family: arial;
+}
+nav ul li p{
+	margin:8px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

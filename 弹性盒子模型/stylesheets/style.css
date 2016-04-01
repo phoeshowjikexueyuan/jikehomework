@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/*必须记住，box－pack是水平位置的对齐
+box－algin是垂直位置的对齐*/
+
+.container div div {
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    display: -webkit-box;
+    display: box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.wrap_middle {
+    display: -webkit-box;
+    display: box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+}
+
+.wrap_top {
+    display: -webkit-box;
+    display: box;
+    -webkit-box-pack: center;
+}
+
+.wrap_bottom {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+}
+
+.top {
+    background-color: #f5675d;
+}
+
+.left {
+    background-color: #eddc49;
+}
+
+.center {
+    background-color: #72cb6f;
+}
+
+.right {
+    background-color: #5fbdb7;
+}
+
+.bottom {
+    background-color: #6984e3;
+}
+
+.container {
+    width: 312px;
+    height: 312px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}

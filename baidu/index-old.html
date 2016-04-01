@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <!-- 实现文本框得到焦点变蓝色，失去焦点变回原来颜色的效果 -->
+    <script type="text/javascript">
+    function change_color() {
+        //点击文本框，设置span标签的class为wrap_text_hl
+        document.getElementById('wrap_text').className = "wrap_text_hl"
+    }
+
+    function change_color_lost() {
+        //失去焦点，恢复原来的class
+        document.getElementById('wrap_text').className = "wrap_text"
+    }
+    </script>
+    <title>百度一下，你就知道</title>
+</head>
+
+<body>
+    <div id="container">
+        <!-- 页面顶端链接 -->
+        <div id="header">
+            <ol id="nav" class="wrap_list">
+                <!-- 前5个标签加粗显示 -->
+                <li><a href="http://news.baidu.com/" class="nav_bold_list">新闻</a></li>
+                <li><a href="http://www.hao123.com/" class="nav_bold_list">hao123</a></li>
+                <li><a href="http://map.baidu.com/" class="nav_bold_list">地图</a></li>
+                <li><a href="http://v.baidu.com/" class="nav_bold_list">视频</a></li>
+                <li><a href="http://tieba.baidu.com/" class="nav_bold_list">贴吧</a></li>
+                <li class="config"><a href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F">登录</a></li>
+                <li class="config"><a href="">设置</a></li>
+                <!-- 最后一个标签设置外边框 -->
+                <li id="more">更多产品</li>
+            </ol>
+        </div>
+        <!-- 页面顶端结束 -->
+        <!-- 页面中部主要内容 -->
+        <div id="main">
+            <!-- 搜索区域 -->
+            <div id="searcher">
+                <div id="logo">
+                    <img src="https://www.baidu.com/img/bd_logo1.png" width="270px" height="129px" alt="百度一下，你就知道">
+                </div>
+                <div id="searcher_input">
+                    <form action="">
+                        <span class="wrap_text" id="wrap_text"><input type="text" id="search_text" onclick="change_color()" onblur="change_color_lost()"></span><span id="wrap_btn"><input type="submit" value="百度一下" name="" id="search_btn"></span>
+                    </form>
+                </div>
+            </div>
+            <!-- 搜索区域结束 -->
+            <!-- 中间的空白区域 -->
+            <div id="blank"></div>
+            <!-- 底部内容 -->
+            <div id="footer">
+                <ol id="footer_nav" class="wrap_list">
+                    <li><a href="https://www.baidu.com/cache/sethelp/help.html">把百度设为首页</a></li>
+                    <li><a href="http://home.baidu.com/">关于百度</a></li>
+                    <li><a href="http://ir.baidu.com/">About&nbsp;Baidu</a></li>
+                </ol>
+                <p>©2015&nbsp;Baidu&nbsp;<a href="http://www.baidu.com/duty/">使用百度前必读</a>&nbsp;<a href="http://jianyi.baidu.com/">意见反馈</a>&nbsp;京ICP证030173号&nbsp;<i style="display:inline-block;width:14px;height:17px;background:url('icons.png') -600px -96px;position:relative;top:3px"></i></p>
+            </div>
+            <!-- 底部内容结束 -->
+        </div>
+    </div>
+</body>
+
+</html>

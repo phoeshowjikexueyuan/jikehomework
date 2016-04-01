@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>百度一下，你就知道</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+    function change_color() {
+        //点击文本框，设置span标签的class为wrap_text_hl
+        document.getElementById('f_text').className = "f_text_hl"
+    }
+
+    function change_color_lost() {
+        //失去焦点，恢复原来的class
+        document.getElementById('f_text').className = "f_text"
+    }
+    </script>
+</head>
+
+<body>
+    <!-- 最顶部，包含导航开始 -->
+    <div class="container">
+    
+    <header>
+        <nav>
+            <ul>
+                <li class="normal_nav"><a href="#">糯米</a></li>
+                <li class="normal_nav"><a href="#">新闻</a></li>
+                <li class="normal_nav"><a href="#">hao123</a></li>
+                <li class="normal_nav"><a href="#">地图</a></li>
+                <li class="normal_nav"><a href="#">视频</a></li>
+                <li class="normal_nav"><a href="#">贴吧</a></li>
+                <li class="config_nav"><a href="#">登陆</a></li>
+                <li class="config_nav"><a href="#">设置</a>
+                    <ul>
+                        <li><a href="">搜索设置</a></li>
+                        <li><a href="">高级搜索</a></li>
+                        <li><a href="">开启预测</a></li>
+                        <li><a href="">搜索历史</a></li>
+                    </ul>
+                </li>
+                <li id="more_nav"><a href="#">更多产品</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    <!-- 顶部结束 -->
+    <!-- 中部，包含logo和搜索框 -->
+    <article>
+        <div class="logo"><img src="./imgs/bd_logo1.png" alt="百度" width="270px" height="129px"></div>
+        <div id="search_box">
+            <form action="">
+                <span id="f_text" class="f_text">
+                    <input type="text" autocomplete="off" onclick="change_color()" onblur="change_color_lost()" />
+                    <span id="f_voice">
+                        <!-- 小话筒 -->
+                    </span>
+                </span>
+                <span id="f_bt"><input type="submit" value="百度一下"></span>
+            </form>
+        </div>
+    </article>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">把百度设为首页</a></li>
+                <li><a href="#">关于百度</a></li>
+                <li><a href="#">About Baidu</a></li>
+            </ul>
+        </nav>
+        <div>
+            <p>&copy;2015&nbsp;Baidu&nbsp;<a href="#">使用百度前必读</a>&nbsp;<a href="#">意见反馈</a>&nbsp;京ICP证030173号<i id="tiny_icon"></i></p>
+        </div>
+    </footer>
+    <!-- 底部网站信息结束 -->
+
+</body>
+
+</html>

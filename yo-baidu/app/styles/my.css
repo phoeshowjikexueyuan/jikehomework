@@ -1,0 +1,585 @@
+html{
+	height:100%;
+}
+body{
+	font-size:0;
+	font-family: Arial, Helvetica, "Microsoft YaHei",sans-serif;
+	background:#666;
+	min-width:960px;
+	position:relative;
+}
+h1,h2,h3,h4,h5,ul,li,p{
+	margin:0;
+	padding:0;
+}
+ul{
+	list-style:none;
+}
+
+
+/*顶部通顶条的设置*/
+header{
+	position:absolute;
+	width:100%;
+	min-width:960px;
+	height:36px;
+	background:rgba(0, 0, 0, .3);
+	top:0;
+}
+/*主内容区域离开顶部显示*/
+article{
+	position:absolute;
+	z-index:0;
+	top:36px;
+	width:100%;
+}
+/*天气设置*/
+.weather_addr,.temperature_wrap,.airquality_wrap{
+	display:inline-block;
+	line-height:36px;
+	color:#fff;
+	font-size:14px;
+	font-weight:normal;
+}
+.weather_addr a,.temperature_wrap a,.airquality_wrap a{
+	text-decoration:none;
+	color:#fff;
+}
+.weather{
+	margin-left:5px;
+	position:relative;
+	width:195px;
+	float:left;
+}
+#current_temp_icon,#currnet_temperature,.air_level{
+	margin:0 10px;
+}
+#current_temp_icon{
+	position:relative;
+	top:4px;
+}
+/*竖线分割条*/
+.weather::after{
+	content:"|";
+	position:absolute;
+	right:0;
+	top:9px;
+	font-size:14px;
+	color:#fff;
+
+}
+/*未来天气，悬浮出现*/
+.future_temper_wrap{
+	display:none;
+	font-size:12px;
+	box-sizing: border-box;
+	box-shadow: 0,0,1px,rgba(0, 0, 0, .2);
+	padding:10px 10px;
+	width:550px;
+	color:#777;
+	position:absolute;
+	z-index:10;
+	top:36px;
+	left:-0px;
+	background:#fff;
+}
+.future_temper_wrap a{
+	color:#398bfb;
+	position:relative;
+}
+.future_temper_wrap::before{
+	content:"";
+	position:absolute;
+	width:8px;
+	height:8px;
+	background:#fff;
+	transform: rotate(45deg);
+	top:-4px;
+	left:80px;
+}
+.future_temper_wrap>p{
+	display:inline-block;
+	margin-right:10px;
+}
+.future_temper_wrap ul{
+	font-size:0;
+	border-top:1px solid #eee;
+	padding-top:10px;
+}
+.future_temper_wrap ul li{
+	display:inline-block;
+	font-size:12px;
+	text-align:center;
+	width:105px;
+}
+.future_temper_wrap ul li a{
+	display:block;
+	color:#333333;
+}
+.future_temper_wrap ul li a:hover{
+	color:#398bfb;
+}
+.future_temper_wrap ul li p{
+	height:18px;
+	line-height:18px;
+}
+/*------------------天气结束--------------------------------*/
+/*------------------用户喜好--user_habit--------------------*/
+.user_habit{
+	float:left;
+	height:36px;
+}
+.user_habit ul{
+	font-size:0;
+}
+.user_habit ul li{
+	display:inline-block;
+	font-size:12px;
+	font-weight:bold;
+	line-height:36px;
+	margin:0 10px;
+}
+.user_habit a{
+	color:#fff;
+}
+/*------------------------主导航条的设置---------------------------*/
+header nav{
+	float:right;
+	margin-right:100px;
+	height:36px;
+}
+header nav a{
+	color:#fff;
+
+}
+header nav>ul>li{
+	display:inline-block;
+	height:36px;
+	line-height:36px;
+	margin:0 10px;
+	font-size:14px;
+	position:relative;
+	font-weight:bold;
+	/*background:rgba(0, 0, 0, .5);*/
+}
+header nav>ul ul{
+	position:absolute;
+	box-sizing: border-box;
+	top:36px;
+	line-height:20px;
+	background:#fff;
+	border:1px solid #eee;
+	/*box-shadow: 0,0,1px,rgba(0, 0, 0, .5);*/
+	z-index:10;
+	display:none;
+}
+/*设置显示和隐藏*/
+header nav>ul>li:hover>ul{
+	display:block;
+}
+header nav>ul ul a{
+	display:block;
+	text-decoration:none;
+	color:#777;
+	font-size:12px;
+	width:58px;
+	height:28px;
+	padding-left:10px;
+	line-height:28px;
+	z-index:9;
+}
+header nav>ul ul a:hover{
+	background:#398bfb;
+	color:#fff;
+}
+/*小箭头的效果*/
+header nav>ul ul::before{
+	content:"";
+	position:absolute;
+	width:8px;
+	height:8px;
+	background:#fff;
+	transform: rotate(45deg);
+	top:-4px;
+	left:29px;
+	z-index:-1;
+
+}
+#user_info{
+	left:-2px;
+}
+#user_config{
+	left:-20px;
+}
+/*主导航条设置完毕*/
+
+/*设置侧边导航条*/
+aside{
+	position:absolute;
+	right:0;	
+	width:90px;
+	/*height:500px;*/
+	background:#f9f9f9;
+	z-index:20;
+}
+aside>a{
+	position:relative;
+	text-align:center;
+	text-decoration:none;
+	color:#fff;
+	display:block;
+	width:90px;
+	height:36px;
+	background:#398bfb;
+}
+aside>a.hover{
+	color:#111;
+	background:#f9f9f9;
+}
+aside>a h1{
+	font-size:15px;
+	line-height:36px;
+	font-weight:normal;
+}
+aside ul{
+	text-align:center;
+	display:none;
+}
+aside ul img{
+	width:40px;
+}
+aside ul li{
+	margin:10px auto 0;
+	padding:10px 0 5px;
+	width:80px;
+	font-size:13px;
+	border-top:1px solid #eee;
+}
+aside ul li a{
+	text-decoration:none;
+	color:#333;
+}
+aside ul li a:hover{
+	text-decoration:underline;
+	font-weight:bold;
+}
+/*侧边导航条设置完毕*/
+/*主搜索区域*/
+.search_wrap{
+	width:700px;
+	height:200px;
+	/*background:rgba(0, 0, 0, 0.2);*/
+	margin:0 auto;
+	text-align:center;
+}
+.search_wrap>img{
+	width:270px;
+	margin-bottom:20px;
+}
+.search_wrap form {
+	position:relative;
+	margin:0 auto;
+	width:670px;
+	height:40px;
+
+}
+.search_wrap form input{
+	box-sizing: border-box;
+	float:left;
+	width:580px;
+	height:40px;
+	font-size:16px;
+	line-height: 40px;
+	padding-left:20px;
+	border:none;
+}
+.search_wrap form input:focus{
+	outline:none;
+}
+.search_wrap form button{
+	box-sizing: border-box;
+	float:left;
+	width:90px;
+	height:40px;
+	font-size:14px;
+	border:none;
+	background:linear-gradient(#fff,#ddd);
+}
+.search_wrap form button:active,.search_wrap form button:focus{
+	outline:none;
+}
+.search_wrap form img{
+	position:absolute;
+	right:100px;
+	width:40px;
+}
+/*浮动搜索区*/
+.search_float_wrap{
+	width:100%;
+	box-sizing: border-box;
+	height:100px;
+	background:rgba(255, 255, 255, 0.95);
+	box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+	border-bottom:1px solid #ddd;
+	padding-top:30px;
+	display:none;
+	position:fixed;
+	top:0;
+	z-index:100;
+
+}
+.search_float_wrap>div>img,.search_float_wrap div form{
+	float:left;
+}
+.search_float_wrap div{
+	width:817px;
+	height: 40px;
+	margin:0 auto;
+}
+.search_float_wrap form{
+	/*position:relative;*/
+}
+.search_float_wrap>div>img{
+	margin-right:10px;
+}
+.search_float_wrap form input,.search_float_wrap form button{
+	float:left;
+	box-sizing: border-box;
+	height:40px;
+}
+.search_float_wrap form input{
+	width:600px;
+	border-left:1px solid #ddd;
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	border-right:none;
+	font-size:16px;
+	line-height:40px;
+	padding-left:20px;
+}
+.search_float_wrap form input:focus{
+	outline:none;
+}
+.search_float_wrap form button{
+	width:90px;
+	border:1px solid #398bfb;
+	background:#398bfb;
+	color:#fff;
+	font-size:14px;
+}
+/*用户主页大面板*/
+.user_main{
+	box-sizing: border-box;
+	/*background:rgba(0, 55, 55, 0.3);*/
+	width:900px;
+	margin:50px auto 20px;
+}
+.card_selector {
+	background:rgba(255, 255, 255, .80);
+	border-bottom:1px solid #ddd;
+}
+.card_selector li{
+	font-size:16px;
+	display:inline-block;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	width:70px;
+	cursor:pointer;
+	/*margin-right:1px;*/
+	font-weight:bold;
+}
+.card_selector li:nth-child(1){
+	width:110px;
+}
+.cur_focus,.card_selector li:hover{
+	background:rgba(0, 0, 0, .4);
+}
+/*分面板*/
+.main_card{
+	background:rgba(255, 255, 255, .80);
+	padding:10px;
+}
+
+/*我的关注面板*/
+.card_attention{
+	display:block;
+}
+.card_attention dd img{
+	/*网站图标设置尺寸*/
+	width:16px;
+}
+.card_attention dl{
+	/*大类分项底部分割线*/
+	border-bottom:1px solid #ddd;
+}
+.card_attention dt{
+	box-sizing: border-box;
+	font-size:16px;
+	font-weight:bold;
+	display:inline-block;
+	vertical-align:top;
+	width:100px;
+	padding:15px 0 0 10px;
+}
+.card_attention dl div{
+	display:inline-block;
+	width:780px;
+}
+.card_attention dd{
+	display:inline-block;
+	height:40px;
+	width:120px;
+	line-height:40px;
+	margin:5px 35px 5px 0;
+	font-size:14px;
+}
+.card_attention dd:hover{
+	background:rgba(255, 255, 255, .3);
+}
+/*推荐面板*/
+.card_recommend{
+	display:none;
+
+}
+.card_recommend .news{
+	width:500px;
+}
+.card_recommend .news li{
+	box-sizing: border-box;
+	border-bottom:1px solid #ddd;
+	padding:10px 20px 0 10px;
+}
+.card_recommend .news li h2{
+	margin:10px 0;
+	font-size:20px;
+	font-weight:bolder;
+}
+.card_recommend .news li h2::before{
+	content:"热";
+	display:inline-block;
+	margin-right:10px;
+	font-size:14px;
+	font-weight:300;
+	text-align:center;
+	line-height:18px;
+	width:20px;
+	height:18px;
+	color:#fff;
+	background:red;
+}
+.card_recommend .news li h2 a{
+	color:#000;
+	text-decoration:none;
+}
+.card_recommend .news li h2 a:hover{
+	text-decoration:underline;
+	color:#398bfb;
+}
+.card_recommend .news li p{
+	font-size:12px;
+	margin:10px 0;
+}
+.card_recommend .news li img{
+	width:200px;
+}
+/*导航面板下的样式设置*/
+.card_nav{
+	display:none;
+	padding:0 20px;
+}
+.card_nav dt{
+	font-size:14px;
+	font-weight:bolder;
+	margin:20px 0;
+}
+.card_nav dd{
+	display:inline-block;
+	width:120px;
+	margin-bottom:20px ;
+}
+.card_nav dd:hover{
+	box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+}
+.card_nav dd img{
+	width:120px;
+}
+/*换肤功能区域*/
+/*背景*/
+#background_img{
+	position:fixed;
+	top:0;
+	z-index:-10;
+	width:100%;
+	height:100%;
+	background-size:cover;
+}
+.background_1{
+	background-image:url("../img/back/1.jpg");
+}
+.background_2{
+	background-image:url("../img/back/2.jpg");
+}
+.background_3{
+	background-image:url("../img/back/3.jpeg");
+}
+.background_4{
+	background-image:url("../img/back/4.jpg");
+}
+/*换肤器*/
+.skin_panel{
+	position:relative;
+	display:none;
+	z-index:20;
+	width:100%;
+	height:200px;
+	background:#fff;
+	border-bottom:1px solid #ddd;
+
+}
+.skin_panel ul{
+	width:600px;
+	padding-top:60px;
+	padding-left:20px;
+}
+.skin_panel ul li{
+	display:inline-block;
+	margin-right:10px;
+	cursor:pointer;
+
+}
+.skin_panel img{
+	height:80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

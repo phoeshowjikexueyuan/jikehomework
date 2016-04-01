@@ -1,0 +1,140 @@
+body{
+	margin:0;
+	padding: 0;
+}
+p{
+	margin-top: 0;
+}
+
+/*设置一下header里的样式 不重要*/
+header{
+	background-color: #ACD276;
+	padding: 10px 0;
+	text-align: center;
+}
+header p{
+	margin: 0;
+}
+header h1{
+	margin-top: 0;
+}
+.container{
+	width: 960px;
+	margin:0 auto;
+}
+
+/*做第一款，两边定宽，中间浮动。*/
+.first,.two,.three{
+	zoom:1;
+}
+
+.main_1{
+	height: 100px;
+	background-color: transparent;
+	float: left;
+	width:100%;
+}
+
+.sub_1{
+	height: 100px;
+	width: 150px;
+	float: left;
+	background-color: #D27ACC;
+	margin-left:-100%;
+}
+.extra_1{
+	height: 100px;
+	width: 90px;
+	float: left;
+	background-color: #4C73D2;
+	margin-left: -90px;
+}
+.wrap_1{
+	height: 100px;
+	margin:0 95px 0 155px;
+	background-color: #CCD2A6;
+}
+/*做第二个，左侧两个固定，右侧一个主要，能自适应*/
+.main_2{
+	height: 100px;
+	width: 100%;
+	float:left;
+	background-color: transparent;
+}
+.sub_2{
+	height: 100px;
+	width: 150px;
+	background-color: #D27ACC;
+	float: left;
+	margin-left: -100%;
+}
+.extra_2{
+	height: 100px;
+	width: 90px;
+	background-color: #4C73D2;
+	float: left;
+	margin-left: -805px;
+}
+.wrap_2{
+	margin-left: 250px;
+	background-color: #CCD2A6;
+	height: 100px;
+}
+
+/*第三个 基本是第二个的逆向，用right*/
+.main_3{
+	height: 100px;
+	width: 100%;
+	float:left;
+	background-color: transparent;
+}
+.sub_3{
+	height: 100px;
+	width: 150px;
+	background-color: #D27ACC;
+	float: left;
+	margin-left: -245px;
+}
+.extra_3{
+	height: 100px;
+	width: 90px;
+	background-color: #4C73D2;
+	float: left;
+	margin-left: -90px;
+}
+.wrap_3{
+	margin-right: 250px;
+	background-color: #CCD2A6;
+	height: 100px;
+}
+
+footer{
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+body {
+	/*将导航条之下的部分推下去，bs的nav默认就是50px*/
+    padding-top: 50px;
+}
+
+.sidebar {
+	/*左边的sidebar固定不动*/
+    background: #f5f5f5;
+    position: fixed;
+    bottom: 0;
+    top: 51px;
+    padding: 20px;
+}
+
+.nav-sidebar {
+	/*左边的ul有充满的现实效果*/
+    margin-right: -20px;
+    margin-left: -20px;
+    margin-bottom: 20px;
+}
+
+.nav-sidebar .active,
+.nav-sidebar .active:hover,
+.nav-sidebar .active:active,
+.nav-sidebar .active:link {
+    background: #428bca;
+    color: #fff;
+}
+
+.main {
+    padding: 20px 20px 0;
+}
+
+.main h1 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.mail-text {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+    	/*自适应效果，缩到一定程度以后 左边的sidebar就不看了*/
+        display: none;
+    }
+}

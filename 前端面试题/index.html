@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>前端面试题总结</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrap-html">
+            <h1>HTML</h1>
+            <dl>
+                <dt>Doctype作用？标准模式与兼容模式各有什么区别?</dt>
+                <dd>
+                    <ol>
+                        <li>&lt;!DOCTYPE&gt;声明位于位于HTML文档中的第一行，处于
+                            <html> 标签之前。告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。</li>
+                        <li>标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作。</li>
+                    </ol>
+                </dd>
+            </dl>
+            <dl>
+                <dt>HTML5 为什么只需要写 &lt;!DOCTYPE HTML&gt;？</dt>
+                <dd>
+                    HTML5 不基于 SGML，因此不需要对DTD进行引用，但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行）；
+                    <br/> 而HTML4.01基于SGML,所以需要对DTD进行引用，才能告知浏览器文档所使用的文档类型。
+                </dd>
+            </dl>
+            <dl>
+                <dt>行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</dt>
+                <dd>
+                    <p>首先：CSS规范规定，每个元素都有display属性，确定该元素的类型，每个元素都有默认的display值，如div的display默认值为“block”，则为“块级”元素；span默认display属性值为“inline”，是“行内”元素。</p>
+                    <ol>
+                        <li>行内元素有：a b span img input select strong（强调的语气）</li>
+                        <li>块级元素有：div ul ol li dl dt dd h1 h2 h3 h4…p</li>
+                        <li>常见的空元素：br&nbsp;hr&nbsp;img&nbsp;input&nbsp;
+                            <br> link&nbsp;meta&nbsp;area&nbsp;base&nbsp;col&nbsp;command&nbsp;
+                            <br> embed&nbsp;keygen&nbsp;param&nbsp;source&nbsp;track&nbsp;wbr
+                        </li>
+                    </ol>
+                </dd>
+            </dl>
+            <dl>
+                <dt>页面倒入样式时，使用link和@import有什么区别？</dt>
+                <dd>
+                    <ol>
+                        <li>link属于XHTML标签，除了加载CSS外，还能用于定义RSS，定义rel连接属性等作用，而@import使css提供的只能用于加载css</li>
+                        <li>页面被加载时，link会同时被加载，而@import引用的css会等到页面被加载完毕时再加载</li>
+                        <li>import是css2.1提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题。</li>
+                    </ol>
+                </dd>
+            </dl>
+            <dl>
+                <dt>介绍一下你对浏览器内核的理解？</dt>
+                <dd>
+                    <p>主要分成两部分：渲染引擎(layout engineer或Rendering Engine)和JS引擎。 渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。
+                        <br/> JS引擎则：解析和执行javascript来实现网页的动态效果。
+                        <br/> 最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎。
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt>常见的浏览器内核有哪些？</dt>
+                <dd>
+                    <ul>
+                        <li>Trident内核：IE,Maxthon,TT,TheWorld,360,搜狗浏览器等。微软系内核</li>
+                        <li>Gecko内核：目前最代表的就是火狐了，Netscape6以上都是这个，Mozilla系。</li>
+                        <li>Preston内核：Opera系，不过Opera现在也叛变了webkit</li>
+                        <li>webkit内核：这个最火，Safari，chrome都是他家的。</li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt>html5有哪些新特性？移除了哪些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分HTML和HTML5？</dt>
+                <dd>
+                    <ul>
+                        <li>
+                            HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。
+                            <ul>
+                                <li>绘画canvas元素</li>
+                                <li>用于媒体回放的video和audio元素</li>
+                                <li>本地离线存储localStorage长期存储数据，浏览器关闭后数据不丢失</li>
+                                <li>sessionStorage的数据在浏览器关闭后自动删除</li>
+                                <li>语义化更好的内容元素，例如article、footer、header、section、nav</li>
+                                <li>表单控件：calendar、date、time、email、url、search</li>
+                                <li>新的技术webworker，websockt,Geolocaltion</li>
+                            </ul>
+                        </li>
+                        <li>
+                            移除的元素：
+                            <ul>
+                                <li>纯表现的元素：basefont,big,center,font,s,strike,tt,u</li>
+                                <li>对可用性产生负面影响的元素：frame,frameset,noframes</li>
+                            </ul>
+                        </li>
+                        <li>
+                            支持HTML5新标签：
+                            <p>IE8/IE7/IE6支持通过document.createElement方法产生的标签， 可以利用这一特性让这些浏览器支持HTML5新标签， 浏览器支持新标签后，还需要添加标签默认的样式。 当然最好的方式是直接使用成熟的框架、使用最多的是html5shim框架
+                            </p>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt>简述一下你对HTML语义化的理解？</dt>
+                <dd>
+                    <p>
+                        用正确的标签做正确的事情。
+                        <br> html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;
+                        <br> 及时在没有样式CCS情况下也以一种文档格式显示，并且是容易阅读的;
+                        <br> 搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;
+                        <br> 使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。
+                        <br>
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt>HTML5的离线储存怎么使用，工作原理能不能解释一下？</dt>
+                <dd></dd>
+            </dl>
+            <dl>
+                <dt>浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？</dt>
+                <dd>
+                    <p>在线的情况下，浏览器发现html头部有manifest属性，它会请求manifest文件，如果是第一次访问app，那么浏览器就会根据manifest文件的内容下载相应的资源并且进行离线存储。如果已经访问过app并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的manifest文件与旧的manifest文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，那么就会重新下载文件中的资源并进行离线存储。 离线的情况下，浏览器就直接使用离线存储的资源。
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt>iframe有那些缺点？</dt>
+                <dd>
+                    <p>
+                        *iframe会阻塞主页面的Onload事件；
+                        <br> *搜索引擎的检索程序无法解读这种页面，不利于SEO;
+                        <br> *iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。
+                        <br> 使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript
+                        <br> 动态给iframe添加src属性值，这样可以可以绕开以上两个问题。
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt>Label的作用是什么？是怎么用的？</dt>
+                <dd>
+                    label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上。
+                </dd>
+            </dl>
+            <dl>
+                <dt>HTML5的form如何关闭自动完成功能？</dt>
+                <dd>给不想要提示的 form 或下某个input 设置为 autocomplete=off。</dd>
+            </dl>
+            <dl>
+                <dt>请描述一下 cookies，sessionStorage 和 localStorage 的区别？</dt>
+                <dd>
+                    <p>
+                        cookie在浏览器和服务器间来回传递。 sessionStorage和localStorage不会
+                        <br> sessionStorage和localStorage的存储空间更大；
+                        <br> sessionStorage和localStorage有更多丰富易用的接口；
+                        <br> sessionStorage和localStorage各自独立的存储空间；
+                        <br>
+                    </p>
+                </dd>
+            </dl>
+            <h1>CSS</h1>
+            <dl>
+                <dt>介绍一下CSS的盒子模型？</dt>
+                <dd>
+                    <ol>
+                        <li>有两种， IE 盒子模型、标准 W3C 盒子模型；IE的content部分包含了 border 和 pading;</li>
+                        <li>盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border).</li>
+                    </ol>
+                </dd>
+            </dl>
+            <dl>
+                <dt>CSS 选择符有哪些？哪些属性可以继承？</dt>
+                <dd>
+                    <p>
+                        * 1.id选择器（ # myid）
+                        <br> 2.类选择器（.myclassname）
+                        <br> 3.标签选择器（div, h1, p）
+                        <br> 4.相邻选择器（h1 + p）
+                        <br> 5.子选择器（ul > li）
+                        <br> 6.后代选择器（li a）
+                        <br> 7.通配符选择器（ * ）
+                        <br> 8.属性选择器（a[rel = "external"]）
+                        <br> 9.伪类选择器（a: hover, li: nth - child）
+                        <br>
+                        <br> * 可继承的样式： font-size font-family color, UL LI DL DD DT;
+                        <br>
+                        <br> * 不可继承的样式：border padding margin width height ;
+                        <br>
+                        <br> * 优先级就近原则，同权重情况下样式定义最近者为准;
+                        <br>
+                        <br> * 载入样式以最后载入的定位为准;
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt>优先级算法如何计算？</dt>
+                <dd>
+                    !important > id > class > tag
+                    <br> important 比 内联优先级高
+                </dd>
+            </dl>
+            <dl>
+                <dt>CSS3新增伪类有那些？</dt>
+                <dd>
+                    p:first-of-type 选择属于其父元素的首个 p 元素的每个 p 元素。
+                    <br> p:last-of-type 选择属于其父元素的最后p 元素的每个 p 元素。
+                    <br> p:only-of-type 选择属于其父元素唯一的 p 元素的每个 p 元素。
+                    <br> p:only-child 选择属于其父元素的唯一子元素的每个 p 元素。
+                    <br> p:nth-child(2) 选择属于其父元素的第二个子元素的每个 p 元素。
+                    <br> :enabled :disabled 控制表单控件的禁用状态。
+                    <br> :checked 单选框或复选框被选中。
+                    <br>
+                </dd>
+            </dl>
+            <dl>
+                <dt>列出display的值，说明他们的作用。position的值， relative和absolute定位原点是？</dt>
+                <dd>
+                    <p>
+                        1.
+                        <br> block 象块类型元素一样显示。
+                        <br> none 缺省值。象行内元素类型一样显示。
+                        <br> inline-block 象行内元素一样显示，但其内容象块类型元素一样显示。
+                        <br> list-item 象块类型元素一样显示，并添加样式列表标记。
+                        <br> 2.
+                        <br> *absolute
+                        <br> 生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。
+                        <br>
+                        <br> *fixed （老IE不支持）
+                        <br> 生成绝对定位的元素，相对于浏览器窗口进行定位。
+                        <br>
+                        <br> *relative
+                        <br> 生成相对定位的元素，相对于其正常位置进行定位。
+                        <br>
+                        <br> * static 默认值。没有定位，元素出现在正常的流中
+                        <br> *（忽略 top, bottom, left, right z-index 声明）。
+                        <br>
+                        <br> * inherit 规定从父元素继承 position 属性的值。
+                        <br>
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt>CSS3有哪些新特性？</dt>
+                <dd>
+                    <p>
+                        CSS3实现圆角（border-radius:8px），阴影（box-shadow:10px），
+                        <br> 对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）
+                        <br> transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);//旋转,缩放,定位,倾斜
+                        <br> 增加了更多的CSS选择器 多背景 rgba
+                        <br>
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt>常见兼容性问题？</dt>
+                <dd>
+                    * png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.
+                    <br>
+                    <br> * 浏览器默认的margin和padding不同。解决方案是加一个全局的*{margin:0;padding:0;}来统一。
+                    <br>
+                    <br> * IE6双边距bug:块属性标签float后，又有横行的margin情况下，在ie6显示margin比设置的大。
+                    <br>
+                    <br> 浮动ie产生的双倍距离 #box{ float:left; width:10px; margin:0 0 0 100px;}
+                    <br>
+                    <br> 这种情况之下IE会产生20px的距离，解决方案是在float的标签样式控制中加入 ——_display:inline;将其转化为行内属性。(_这个符号只有ie6会识别)
+                    <br>
+                    <br> 渐进识别的方式，从总体中逐渐排除局部。
+                    <br>
+                    <br> 首先，巧妙的使用“\9”这一标记，将IE游览器从所有情况中分离出来。
+                    <br> 接着，再次使用“+”将IE8和IE7、IE6分离开来，这样IE8已经独立识别。
+                    <br>
+                    <br> css
+                    <br> .bb{
+                    <br> background-color:#f1ee18;/*所有识别*/
+                    <br> .background-color:#00deff\9; /*IE6、7、8识别*/
+                    <br> +background-color:#a200ff;/*IE6、7识别*/
+                    <br> _background-color:#1e0bd1;/*IE6识别*/
+                    <br> }
+                    <br> * IE下,可以使用获取常规属性的方法来获取自定义属性,
+                    <br> 也可以使用getAttribute()获取自定义属性;
+                    <br> Firefox下,只能使用getAttribute()获取自定义属性.
+                    <br> 解决方法:统一通过getAttribute()获取自定义属性.
+                    <br>
+                    <br> * IE下,even对象有x,y属性,但是没有pageX,pageY属性;
+                    <br> Firefox下,event对象有pageX,pageY属性,但是没有x,y属性.
+                    <br>
+                    <br> * 解决方法：（条件注释）缺点是在IE浏览器下可能会增加额外的HTTP请求数。
+                    <br>
+                    <br> * Chrome 中文界面下默认会将小于 12px 的文本强制按照 12px 显示,
+                    <br> 可通过加入 CSS 属性 -webkit-text-size-adjust: none; 解决.
+                    <br>
+                    <br> 超链接访问过后hover样式就不出现了 被点击访问过的超链接样式不在具有hover和active了解决方法是改变CSS属性的排列顺序: L-V-H-A : a:link {} a:visited {} a:hover {} a:active {}
+                </dd>
+            </dl>
+        </div>
+    </div>
+</body>
+
+</html>

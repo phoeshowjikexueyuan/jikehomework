@@ -1,0 +1,234 @@
+body{
+	font-size:12px;
+	font-family:arial;
+	min-height:600px;
+	min-width:810px;
+	_height:600px;
+	_width:600px;
+	position:relative;
+	height:100px;
+}
+header{
+	text-align:center;
+	
+}
+header a{
+	color:black;
+}
+header a:hover{
+	color:#3388ff;
+}
+header nav{
+	position:absolute;
+	right:0;
+	top:0;
+	padding-right:20px;
+}
+header ul{
+	list-style:none;
+	margin-right: 0;
+	margin-top:12px;
+	padding: 0;
+}
+header nav>ul>li{
+	float:left;
+	line-height:24px;
+	margin-left:20px;
+}
+/*这段代码可以让下拉有效*/
+header nav ul ul{
+	display:none;
+	position:absolute;
+}
+
+
+#config ul{
+	top:20px;
+	right:90px;
+	background-color:white;
+	border:solid 1px #888;
+	box-shadow:1px 1px 1px rgba(0,0,0,.3);
+	-webkit-box-shadow:1px 1px 1px rgba(0,0,0,.3);
+	-moz-box-shadow:1px 1px 1px rgba(0,0,0,.3);
+	-o-box-shadow:1px 1px 1px rgba(0,0,0,.3);
+	-ms-box-shadow:1px 1px 1px rgba(0,0,0,.3);
+	/*behavior: url(ie-css3.htc);*/
+}
+#config ul a{
+	padding:5px 5px;
+	text-decoration:none;
+	
+}
+#config ul a:hover{
+	background-color:#3388ff;
+	color:white;
+}
+/*更多产品的代码*/
+header nav #more_nav>a{
+	/*给“更多产品”加背景*/
+	color:white;
+	text-decoration:none;
+	background-color:#3388ff;
+	padding:5px 10px;
+}
+#more_nav ul{
+	top:20px;
+
+}
+.bg{
+	height:auto;
+	background-color:#b7b7b7;
+}
+#more_nav ul li{
+	border-bottom:solid 1px #b7b7b7;
+	margin:10px 0;
+	padding:5px 0;
+}
+
+#more_nav ul li a {
+	position:relative;
+	/*padding:20px;*/
+
+}
+#more_nav ul li a span{
+	position:absolute;
+	display:block;
+	top:5px;
+	left:12px;
+}
+
+
+header nav ul li:hover ul{
+	display:block;
+}
+
+
+/*－－－－－－－－－－－－－－－*/
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#search_box {
+    width: 645px;
+    height: 260px;
+    display: block;
+    margin: auto;
+}
+
+.f_text {
+    display: inline-block;
+    float: left;
+    width: 539px;
+    height: 34px;
+    border: solid 1px #b7b7b7;
+    border-right-style: none;
+}
+
+.f_text:hover {
+    border-color: #a0a0a0;
+}
+
+#f_text input {
+    width: 530px;
+    height: 30px;
+    border-style: none;
+    font-size: 17px;
+    display: block;
+}
+
+#f_text input:focus {
+    outline-style: none;
+}
+
+.f_text_hl {
+    display: inline-block;
+    float: left;
+    width: 539px;
+    height: 34px;
+    border: solid 1px #38f;
+    border-right-style: none;
+}
+
+#f_bt {
+    float: left;
+}
+
+#f_bt input {
+    background-color: #38f;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #38f;
+    height: 36px;
+    width: 100px;
+    color: white;
+    font-size: 15px;
+    /*font-weight: bold;*/
+}
+
+#f_bt input:hover {
+    border-color: #1375fe;
+    background-color: #1375fe;
+}
+
+
+
+/*小话筒的设置*/
+
+#f_voice {
+    display: inline-block;
+    width: 30px;
+    height: 32px;
+    margin: 0;
+    background: url("../img/mic.png") no-repeat center;
+    background-size: 25px 25px;
+    position: relative;
+    top: -33px;
+    left: 505px;
+    cursor: pointer;
+}
+
+#f_voice:hover {
+    background: url("../img/mic_hover.png") no-repeat center;
+    background-size: 25px 25px;
+}
+/*设置中部*/
+article{
+	padding-top:10%;
+}
+/*设置底部*/
+
+footer {
+    clear: both;
+    display: block;
+    /*position: absolute;
+    bottom:44px;*/
+    width: 700px;
+    margin: 20px auto;
+}
+
+
+
+footer nav  {
+    padding: 0px;
+    text-align: center;
+}
+
+footer p {
+    text-align: center;
+    color: #666;
+}
+
+footer p a {
+    color: #666;
+}
+
+footer p i {
+    display: inline-block;
+    width: 14px;
+    height: 17px;
+    background: url('../img/icons.png') -600px -96px;
+    position: relative;
+    top: 3px;
+}

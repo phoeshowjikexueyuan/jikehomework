@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript计算器</title>
+
+</head>
+<body>
+	<div class="container">
+	<form>
+		<label for="first">第一个数字：</label>
+		<input type="text" name="first_num" id="first">
+		<label for="second" >第二个数字：</label>
+		<input type="text" id="second" >
+		<label for="count">运算符：</label>
+		<select id="count">
+			<option value ="加" selected="selected">加</option>
+			<option value ="减">减</option>
+			<option value="乘">乘</option>
+			<option value="除">除</option>
+		</select>
+		
+		<button onclick="result();return false">计算</button>
+
+	</form>
+
+	<p id="result"></p>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body{
+	margin: 0;
+}
+h1{
+	text-align: center;
+}
+
+.wrap{
+	
+	/*这个块下面是3d的*/
+	-webkit-transform-style:preserve-3d;
+	/*消失点属性要慎用啊，效果很诡异*/
+	/*-webkit-perspective: 150px;*/
+	-webkit-perspective-origin:50% 50%;
+	/*动画设置*/
+	-webkit-animation-name:myanimation;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-duration:10s;
+	/*指定当前旋转的位置*/
+	-webkit-transform-origin: 45px 45px 0;
+}
+
+
+@-webkit-keyframes myanimation{
+	10%{-webkit-transform:rotateY(180deg);}
+	30%{-webkit-transform:rotateY(90deg) rotateX(120deg);}
+	50%{-webkit-transform:rotateX(90deg) rotateZ(45deg);}
+	60%{-webkit-transform:rotateX(90deg) rotateZ(45deg);}
+	60%{-webkit-transform:rotateY(90deg) rotateX(45deg);}
+}
+
+
+.wrap>div{
+	width: 90px;
+	height: 90px;
+	position: absolute;
+
+}
+
+.one{
+	background-color: transparent;
+	border:1px solid #666;
+	-webkit-transform: translateZ(45px);
+
+}
+.two{
+	background-color: transparent;
+	border:1px solid #666;
+	-webkit-transform: rotateY(90deg) translateZ(45px);
+}
+.three{
+	background-color: transparent;
+	border:1px solid #666;
+	-webkit-transform: rotateY(-90deg) translateZ(45px);
+}
+.four{
+	background-color: transparent;
+	border:1px solid #666;
+	-webkit-transform: rotateX(90deg) translateZ(45px);
+}
+.five{
+	background-color: transparent;
+	border:1px solid #666;
+	-webkit-transform: rotateX(-90deg) translateZ(45px);
+}
+.six{
+	background-color: transparent;
+	border:1px solid #666;
+	-webkit-transform: rotateY(180deg) translateZ(45px);
+}
+/*每个面分九个*/
+.wrap_top div,.wrap_center div,.wrap_bottom div{
+	float: left;
+	border:1px solid black;
+	border-radius: 2px;
+	width: 28px;
+	height: 28px;
+}
+
+
+
+#wrap{
+	width: 100px;
+	height: 100px;
+	margin:50px auto 50px;
+
+}
+#wrap:hover .six div div{
+	background-color: #E90012;
+}
+#wrap:hover .five div div{
+	background-color: #2B5AE6;
+}
+#wrap:hover .four div div{
+	background-color: #27F57A;
+}
+#wrap:hover .three div div{
+	background-color: #48B911;
+}
+#wrap:hover .two div div{
+	background-color: #EFA313;
+}
+#wrap:hover .one div div{
+	background-color: #73007D;
+}
+
+
+p{
+	text-align: center;
+	margin-top: 50px;
+}

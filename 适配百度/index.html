@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+	<title>百度一下，你就知道</title>
+	<link rel="stylesheet" href="stylesheet/normalize.css">
+	<link rel="stylesheet" href="stylesheet/style.css">
+	<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+	<![if lt IE 9]>
+	<!-- 低版本ie使用HTML5 -->
+	
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.js"></script>
+    <script src="http://cdn.bootcss.com/nwmatcher/1.3.6/nwmatcher.min.js"></script>
+    <script src="./js/selectivizr.js"></script>
+
+	<![endif]>
+	<link rel="stylesheet" href="stylesheet/normalize.css">
+	<link rel="stylesheet" href="stylesheet/style.css">
+	<script type="text/javascript">
+    function change_color() {
+        //点击文本框，设置span标签的class为wrap_text_hl
+        document.getElementById('f_text').className = "f_text_hl"
+    }
+
+    function change_color_lost() {
+        //失去焦点，恢复原来的class
+        document.getElementById('f_text').className = "f_text"
+    }
+    </script>
+
+</head>
+<body>
+<!-- 顶部开始 -->
+	<header>
+		<nav>
+			<ul>
+                <li class="normal_nav"><a href="#">糯米</a></li>
+                <li class="normal_nav"><a href="#">新闻</a></li>
+                <li class="normal_nav"><a href="#">hao123</a></li>
+                <li class="normal_nav"><a href="#">地图</a></li>
+                <li class="normal_nav"><a href="#">视频</a></li>
+                <li class="normal_nav"><a href="#">贴吧</a></li>
+                <li class="config_nav"><a href="#">登陆</a></li>
+                <li class="config_nav" id="config"><a href="#">设置</a>
+
+                    <ul>
+                    	
+                        <li><a href="">搜索设置</a></li>
+                        <li><a href="">高级搜索</a></li>
+                        <li><a href="">开启预测</a></li>
+                        <li><a href="">搜索历史</a></li>
+                    </ul>
+                </li>
+                <li id="more_nav"><a href="#">更多产品</a>
+					<div id="bg">
+						<ul>
+							<li><a href="#"><img src="img/icon.png" width="48px"><span>音乐</span></a></li>
+							<li><a href="#"><img src="img/icon.png" width="48px"><span>图片</span></a></li>
+							<li><a href="#"><img src="img/icon.png" width="48px"><span>知道</span></a></li>
+							<li><a href="#"><img src="img/icon.png" width="48px"><span>文库</span></a></li>
+							
+							<li><a href="#">全部产品>></a></li>
+						</ul>
+					</div>
+                </li>
+            </ul>
+		</nav>
+	</header>
+	<!-- 顶部结束 -->
+	    <!-- 中部，包含logo和搜索框 -->
+    <article>
+        <div class="logo"><img src="img/bd_logo1.png" alt="百度" width="270px" height="129px"></div>
+        <div id="search_box">
+            <form action="">
+                <span id="f_text" class="f_text">
+                    <input type="text" autocomplete="off" onclick="change_color()" onblur="change_color_lost()" />
+                    <span id="f_voice">
+                        <!-- 小话筒 -->
+                    </span>
+                </span>
+                <span id="f_bt"><input type="submit" value="百度一下"></span>
+            </form>
+        </div>
+    </article>
+
+    <footer>
+        <nav>
+            
+                <a href="#">把百度设为首页</a>&nbsp;&nbsp;
+                <a href="#">关于百度</a>&nbsp;&nbsp;
+                <a href="#">About Baidu</a>&nbsp;&nbsp;
+            
+        </nav>
+        <!-- <br> -->
+        <div>
+            <p>&copy;2015&nbsp;Baidu&nbsp;<a href="#">使用百度前必读</a>&nbsp;<a href="#">意见反馈</a>&nbsp;京ICP证030173号<i id="tiny_icon"></i></p>
+        </div>
+    </footer>
+    <!-- 底部网站信息结束 -->
+</body>
+</html>

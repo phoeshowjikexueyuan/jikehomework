@@ -1,0 +1,90 @@
+body{
+	/*清理默认样式*/
+	margin: 0;
+	padding: 0;
+	/*取消空行距离*/
+	font-size: 0;
+	background: #353535;
+}
+.container{
+	/*计算器整体居中,顶部距离*/
+	width: 256px;
+	margin: 100px auto;
+}
+.wrap_result input{
+	/*显示框显示效果*/
+	box-sizing: border-box;
+	height: 40px;
+	width: 255px;
+	margin-bottom: 10px;
+	border:1px solid #606060;
+	background: #606060;
+	color: #dedede;
+	font-size: 15px;
+	padding-left: 10px;
+
+}
+.wrap_num{
+
+	width: 192px;
+	float: left;
+}
+.wrap_conter{
+	width:64px;
+	float: left;
+	position: relative;
+}
+.wrap_senior button{
+	/*高级计算器按钮摆放*/
+	height: 40px;
+	width: 47px;
+	border:1px solid #4c4c4c;
+	background: #4c4c4c;
+	color: #dedede;
+	margin: 2px;
+	font-size: 14px;
+}
+.wrap_num button{
+	/*数字键盘按钮摆放*/
+	height: 40px;
+	width: 60px;
+	border:1px solid #606060;
+	background: #606060;
+	color: #dedede;
+	margin: 2px;
+	font-size: 14px;
+}
+.wrap_conter button{
+	/*基础计算按钮摆放*/
+	height: 40px;
+	width: 60px;
+	border:1px solid #4c4c4c;
+	background: #4c4c4c;
+	color: #dedede;
+	margin: 2px;
+	font-size: 14px;
+}
+.wrap_ac button{
+	height: 40px;
+	width: 252px;
+	border:1px solid #4c4c4c;
+	background: #4c4c4c;
+	color: #dedede;
+	margin: 2px;
+	font-size: 14px;
+}
+/*键盘效果*/
+button:hover{
+	background: rgba(255,255,255,0.3);
+}
+button:active{
+	background: rgba(168,0,0,0.3);
+}
+button:focus{
+	outline-style: none;
+}
+#result{
+	/*等号位移*/
+	position: absolute;
+	left: -64px;
+}

@@ -1,0 +1,111 @@
+body{
+	margin: 0;
+	background: #187791;
+}
+/*设置中心白色主体*/
+.container{
+	background-color: #fff;
+	width: 710px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:10px;
+	margin-bottom: 20px; 
+	border-radius: 20px;
+}
+/*设置logo*/
+
+/*设置导航条*/
+header{
+	width: 90%;
+	margin: auto;
+	padding-top: 20px;
+}
+nav{
+	text-align: right;
+	color: red;
+	font-size: 10px;
+	position: relative;
+	top:-25px;
+}
+nav ul li{
+	display: inline-block;
+	margin-left:10px;
+}
+
+nav a{
+	text-decoration: none;
+	color: #ff089c;
+}
+/*设置导航结束*/
+/*设置标题*/
+h1{
+	text-align: center;
+}
+/*设置中部表格内文字样式*/
+.container table{
+	font-size: 12px;
+
+}
+/*必填文字*/
+.required{
+	color: red;
+}
+/*高亮文字*/
+.blue-t{
+	color: blue;
+}
+/*主体表格边框／尺寸*/
+.main{
+	width: 90%;
+	margin: auto;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #cccccc;
+	border-collapse: collapse;
+	line-height: 150%;
+}
+/*单元格边框／单线*/
+td{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #cccccc;
+	border-collapse: collapse;
+}
+/*中部特殊表格*/
+.lh td{
+	border-style: none;
+}
+/*表头*/
+#th{
+	text-align: center;
+	background: url("beijin1.gif");
+}
+
+/*小项目*/
+.item{
+	text-align: right;
+	width: 136px;
+}
+/*大项目*/
+.item1{
+	height: 23px;
+	background-color: #eeeeee;
+	color: #003399;
+	text-align: left;
+	font-weight: bold;
+	font-size: 14px;
+}
+/*提交按钮单独设置*/
+.bt_sub{
+	height: 82px;
+	text-align: center;
+}
+.bt_sub input{
+	width: 65px;
+}
+/*页脚单独设置*/
+footer{
+	font-size: 10px;
+	text-align: center;
+	padding-bottom: 20px;
+}

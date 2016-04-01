@@ -1,0 +1,158 @@
+body {
+    font-family: arial;
+    margin: 0;
+    padding: 0px;
+}
+
+ol.wrap_list {
+    list-style-type: none;
+}
+
+#more {
+    background-color: #3388ff;
+    padding: 4px;
+    font-size: 15px;
+    color: white;
+}
+
+.wrap_list li {
+    display: inline-block;
+}
+
+ol#nav {
+    text-align: right;
+}
+
+ol#nav>li {
+    font-size: 13px;
+    margin: 3px 8px;
+}
+
+a.nav_bold_list {
+    font-weight: bold;
+    color: #333;
+}
+
+a.nav_bold_list:hover {
+    color: blue;
+}
+
+.config a {
+    color: #333;
+}
+
+.config a:hover {
+    color: blue;
+}
+
+div.container {
+    margin: 0px;
+}
+
+#searcher {
+    text-align: center;
+}
+
+#blank {
+    height: 250px;
+}
+
+#footer {
+    text-align: center;
+}
+
+#footer #footer_nav a {
+    font-size: 12px;
+    margin: 10px;
+    color: blue;
+}
+
+#footer_nav {
+    margin: 20 0;
+    padding: 0px;
+    text-align: center;
+}
+
+#footer p {
+    font-size: 12px;
+    color: #666;
+}
+
+#footer p a {
+    color: #666;
+}
+
+
+
+#logo {
+    margin-bottom: 20px;
+}
+.wrap_text{
+	display: inline-block;
+	height: 34px;
+	width:539px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-color:#8b8b8b;
+	border-width: 1px;
+	margin: 0px;
+	padding: 0px;
+	vertical-align:middle;
+}
+.wrap_text:hover{
+	border-color:#3d3d3d;
+}
+.wrap_text_hl{
+	display: inline-block;
+	height: 34px;
+	width:539px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-color:#3388ff;
+	border-width: 1px;
+	margin: 0px;
+	padding: 0px;
+	vertical-align:middle;
+}
+#wrap_btn{
+	display: inline-block;
+	height: 34px;
+	width: 100px;
+	border-style: solid;
+	border-color:#3388ff;
+	border-width: 1px;
+	margin: 0px;
+	padding: 0px;
+	background-color: #3388ff;
+	vertical-align:middle;
+}
+
+#search_text{
+	width:530px;
+	height: 25px;
+	margin: 1px 2px;
+	padding: 2px;
+	border-style: none;
+}
+#search_text:focus{
+	border-style: none;
+	outline: none;
+	
+}
+#search_btn{
+	border:none;
+	color: white;
+	background-color: #3388ff;
+	height:34px;
+	width: 100px;
+	margin: 0px;
+	padding: 5px 10px;
+	font-size: 15px;
+	text-align:center;
+
+}
+#search_btn:hover{
+	background-color: #1074ff;
+}

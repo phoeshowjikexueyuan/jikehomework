@@ -1,0 +1,13 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.split {
+	width: 600px;
+	margin: 20px auto;
+	-webkit-column-count:3;
+	-moz-column-count:3;
+	-moz-column-rule-style:dotted;
+	-webkit-column-rule-style:dotted;
+	column-rule-style:dotted;
+}

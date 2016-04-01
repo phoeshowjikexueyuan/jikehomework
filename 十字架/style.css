@@ -1,0 +1,57 @@
+body{
+	margin:0px;
+}
+
+.container{
+	/*容器将十字架包裹，auto配合四边的位置设置让整个容器居中*/
+	width: 312px;
+	height: 312px;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+
+}
+.top,.left,.center,.right,.bottom{
+	/*统一将十字架的中各个小块的大小和表现进行设置*/
+	height: 100px;
+	width:100px;
+	margin: 2px;
+	box-shadow: 1px 3px 3px #666;
+	border-radius: 2px;
+}
+
+.top{
+	background-color: #f5675d;
+	position: relative;
+	left:104px;
+	/*margin为2，所以调整各个小块的位置的时候要注意这个像素设置*/
+}
+.left{
+	background-color: #eddc49;
+}
+.center{
+	background-color: #72cb6f;
+	display: table;
+	text-align: center;
+}
+.center span{
+	display: table-cell;
+	vertical-align: middle;
+	/*外框为table，内框为table－cell，这样就可以设置垂直居中*/
+}
+.right{
+	background-color: #5fbdb7;
+}
+.bottom{
+	background-color: #6984e3;
+	position: relative;
+	left:104px;
+	clear: both;
+	top: 2px;
+	/*top:106px;*/
+}
+
+#mid div{
+	float: left;
+	/*上下两块设置好位移，中间三块依次排开*/
+}

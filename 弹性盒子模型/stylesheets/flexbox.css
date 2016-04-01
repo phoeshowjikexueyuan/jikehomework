@@ -1,0 +1,22 @@
+.first{
+	-webkit-order:3;
+	height: 100px;
+	background: #19fcaf;
+	-webkit-flex:0.5;
+}
+.second{
+	-webkit-order:1;
+	height: 150px;
+	background-color: #ff5de6;
+	-webkit-flex:1;
+}
+.third{
+	-webkit-order:2;
+	height: 200px;
+	background-color: #ffa55d;
+	-webkit-flex:0.5;
+}
+.container{
+	display: -webkit-flex;
+	width: 100%;
+}

@@ -1,0 +1,418 @@
+/*全局样式*/
+
+
+/*==========================================
+先使用个全局的font-face
+============================================*/
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('./fonts/iconfont.eot');
+    /* IE9*/
+    src: url('./fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('./fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('./fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('./fonts/iconfont.svg#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/*===============================================*/
+
+body {
+    /*测试色*/
+    /*background-color: yellow;*/
+    min-width: 320px;
+    /*限定最小屏幕是iPhone4能用的*/
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+header {
+    display: none;
+}
+
+/*===========顶部菜单设置=============*/
+header .user nav{
+    float:right;
+}
+header nav a{
+    text-decoration: none;
+    color: #333;
+}
+header nav a:active{
+    color: #333;
+}
+header nav a:visited{
+    color: #333;
+}
+header .user nav>ul>li{
+    float:left;
+    display: block;
+    margin-right: 20px;
+    position: relative;
+    margin-top: 10px;
+    text-align: center;
+}
+header .user nav>ul>li:hover ul{
+    display: block;
+}
+header .user nav>ul>li ul{
+    position: absolute;
+    /*display: block;*/
+    width: 65px;
+    left:-15px;
+    display: none;
+}
+header .user nav>ul>li ul li{
+    border-left: 1px solid #D7D4E4;
+    border-right: 1px solid #D7D4E4;
+}
+header .user nav>ul>li ul li:nth-child(1){
+    border-top: 1px solid #D7D4E4;
+}
+header .user nav>ul>li ul li:nth-child(4){
+    border-bottom: 1px solid #D7D4E4;
+}
+header .user nav>ul>li ul li:hover{
+    background: #4354E4;
+}
+header .user nav>ul>li ul li:hover a{
+    color: #fff;
+}
+#more{
+    background: #4354E4;
+    color: white;
+    padding:4px 8px;
+}
+/*设置logo的位置和尺寸，居中，50%大小*/
+
+.logo {
+    clear: both;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo img {
+    width: 175px;
+    margin-bottom: 15px;
+}
+
+
+/*search_tool 搜索框部分*/
+
+.search_tool button {
+    margin: 0;
+    padding: 0;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e7e9eb);
+    ;
+    background: linear-gradient(top, #f9f9f9, #e7e9eb);
+    border: none;
+    border-left: 1px solid #54595D;
+    height: 42px;
+    width: 79px;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #474A4E;
+    text-shadow: 0 1px 0 #fafafa;
+    line-height: 42px;
+    position: absolute;
+    top: 1px;
+    right: 0;
+}
+
+.search_tool input[type="text"] {
+    margin: 0;
+    padding: 7px 0;
+    display: block;
+    height: 28px;
+    width: 100%;
+    border: 1px solid #54595D;
+    border-radius: 0;
+}
+
+.wrap_se {
+    position: relative;
+}
+
+
+/*=============开始设置常用工具的样式================*/
+
+.tools {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.tools ul {
+    font-size: 0;
+}
+
+.tools li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 16.6%;
+    font-size: 14px;
+    text-align: center;
+}
+
+.tools li a div {
+    color: #54595D;
+}
+
+.tools li a p {
+    color: #54595D;
+}
+
+
+/*================常用工具样式设置结束===================*/
+
+
+/*下方主要块的全局样式：设置一下所有的包裹*/
+
+.wrap_fav_website,
+.wrap_news,
+.wrap_life {
+    border: 1px solid #DFE6EB;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+
+/*设置一下标题头*/
+
+.wrap_fav_website h2,
+.wrap_news h2,
+.wrap_life h2 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #868A8E;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #EEE9E9;
+}
+
+
+/*包裹设置结束*/
+
+
+/*===============设置常用网址样式========================*/
+
+.fav_website ul {
+    display: block;
+    font-size: 0;
+}
+
+.fav_website li {
+    display: inline-block;
+    width: 25%;
+    font-size: 14px;
+}
+
+.fav_website li a {
+    padding: 0 6px;
+    color: #333;
+}
+
+
+/*=================常用网址设置结束========================*/
+
+
+/*====================实时热点===========================*/
+
+.wrap_news_list {
+    font-size: 0;
+    padding-left: 10px;
+}
+
+.wrap_news a {
+    display: inline-block;
+    font-size: 15px;
+    width: 50%;
+    color: #333;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    /*font-weight:bold;*/
+}
+
+
+/*======================实时热点结束=========================*/
+
+
+/*=================生活服务设置样式=======================*/
+
+.wrap_life ul {
+    font-size: 0;
+}
+
+.wrap_life ul li {
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    width: 25%;
+}
+
+.wrap_life ul li a {
+    color: #333;
+}
+
+.wrap_life ul li a div {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 28px;
+    color: white;
+    line-height: 60px;
+}
+
+.icon_film {
+    background-color: #E7B300;
+}
+
+.icon_tuangou {
+    background-color: #92E702;
+}
+
+.icon_waimai {
+    background-color: #E73D00;
+}
+
+.icon_taxi {
+    background-color: #E75DE0;
+}
+
+.icon_hotel {
+    background: #4694E7;
+}
+
+.icon_food {
+    background: #06E7D0;
+}
+
+.icon_KTV {
+    background: #758BE7;
+}
+
+.icon_bank {
+    background: #E7D502;
+}
+
+
+/*=====================设置注脚=====================*/
+
+footer p {
+    text-align: center;
+}
+
+
+/*=====================设置注脚end=====================*/
+
+
+/*====================生活服务样式设置结束===================*/
+
+
+/*手机样式结束，进入平板模式，以iPad为基准*/
+
+@media screen and (min-width: 768px) {
+    body {
+        /*background-color: red;*/
+    }
+    .wrap_news_life {
+        height: 250px;
+    }
+    .wrap_news {
+        display: inline-block;
+        width: 48%;
+        height: 100%;
+        float: left;
+    }
+    .wrap_life {
+        display: inline-block;
+        width: 45%;
+        height: 100%;
+        float: right;
+    }
+    footer {
+        clear: both;
+    }
+}
+
+
+/*超越1024的限制，进入电脑端*/
+
+@media screen and (min-width: 1024px) {
+    html {
+        height: 100%;
+    }
+    body {
+        position: relative;
+        height: 100%;
+    }
+    .container {
+        display: block;
+        position: relative;
+        height: 100%;
+        min-height: 600px;
+        min-width: 800px;
+    }
+    .tools,
+    .wrap_fav_website,
+    .wrap_news,
+    .wrap_life,
+    .wrap_news_life,.weather {
+        display: none;
+    }
+    header{
+        display: block;
+    }
+    .wrap_se {
+        width: 800px;
+        margin: 30px auto 0;
+    }
+    footer {
+        position: absolute;
+        width: 100%;
+        bottom: 88px;
+    }
+    .form_se {
+        position: relative;
+        top: 28%;
+    }
+    .form_se button{
+        background: #3846C5;
+        position: absolute;
+        right: -1px;
+        color: white;
+        text-shadow: none;
+        font-weight: normal;
+    }
+    .form_se button:hover{
+        background: #4152EF;
+    }
+
+}
+
+
+/*超大屏幕，这个先不设计了*/
+
+
+/*@media screen and (min-width: 1200px) { 
+body{
+	background-color: green;
+}
+} */
+

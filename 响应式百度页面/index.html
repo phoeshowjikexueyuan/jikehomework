@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>css响应式</title>
+    <!-- <link href="http://cdn.bootcss.com/normalize/3.0.3/normalize.min.css" rel="stylesheet"> -->
+    <!-- 本次使用ali的cube库，主要是为了用neat.css -->
+    <link rel="stylesheet" href="https://g.alicdn.com/thx/cube/1.2.3/cube-https-min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- 网页的整体容器 -->
+    <div class="container">
+        <!-- 设置头部，包括一个天气指示器和个人用户的图标 -->
+        <header>
+            <div class="weather">
+            </div>
+            <div class="user">
+                <nav>
+                    <ul>
+                        <li><a href="#">糯米</a></li>
+                        <li><a href="#">新闻</a></li>
+                        <li><a href="#">hao123</a></li>
+                        <li><a href="#">地图</a></li>
+                        <li><a href="#">视频</a></li>
+                        <li><a href="#">贴吧</a></li>
+                        <li><a href="#">登陆</a></li>
+                        <li>
+                            <a href="#">设置</a>
+                            <ul>
+                                <li><a href="#">搜索设置</a></li>
+                                <li><a href="#">搜索设置</a></li>
+                                <li><a href="#">搜索设置</a></li>
+                                <li><a href="#">搜索设置</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" id="more">更多产品</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- 头部结束 -->
+        <!-- 中部主要内容 -->
+        <div class="form_se">
+            <!-- 设置logo -->
+            <section class="logo">
+                <img src="./img/logo.png">
+            </section>
+            <!-- logo结束 -->
+            <!-- 搜索工具主体 -->
+            <section class="search_tool">
+                <div class="wrap_se">
+                    <form>
+                        <input type="text" />
+                        <button type="submit">百度一下</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <!-- 搜索工具主体结束 -->
+        <!-- 常用工具列表 -->
+        <nav class="tools">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="icon_news iconfont">&#xe639;</div>
+                        <p>新闻</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon_news iconfont">&#xe633;</div>
+                        <p>小说</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon_news iconfont">&#xe632;</div>
+                        <p>视频</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon_news iconfont">&#xe620;</div>
+                        <p>生活</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon_news iconfont">&#xe62b;</div>
+                        <p>地图</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon_news iconfont">&#xe62c;</div>
+                        <p>更多</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- 常用工具列表结束 -->
+        <!-- 常用网址框 -->
+        <section class="wrap_fav_website">
+            <h2>常用网址</h2>
+            <nav class="fav_website">
+                <ul>
+                    <li><a href="#">贴吧</a></li>
+                    <li><a href="#">hao123</a></li>
+                    <li><a href="#">地图</a></li>
+                    <li><a href="#">百度vip</a></li>
+                    <li><a href="#">图片</a></li>
+                    <li><a href="#">音乐</a></li>
+                    <li><a href="#">糯米</a></li>
+                    <li><a href="#" class="fav_website_more">更多</a></li>
+                </ul>
+            </nav>
+        </section>
+        <!-- 常用网址框结束 -->
+        <div class="wrap_news_life">
+            <!-- 实时热点新闻 -->
+            <section class="wrap_news">
+                <h2>实时热点</h2>
+                <div class="wrap_news_list">
+                    <a href="#">我就是个新闻</a>
+                    <a href="#">我就是个新闻</a>
+                    <a href="#">我就是个新闻</a>
+                    <a href="#">我就是个新闻</a>
+                    <a href="#">我就是个新闻</a>
+                    <a href="#">我就是个新闻</a>
+                </div>
+            </section>
+            <!-- 热点新闻结束 -->
+            <!-- 生活服务开始 -->
+            <section class="wrap_life">
+                <h2>生活服务</h2>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="icon_film iconfont">&#xe619;</div>
+                            <p>电影</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon_tuangou iconfont">&#xe619;</div>
+                            <p>团购</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon_waimai iconfont">&#xe619;</div>
+                            <p>外卖</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon_taxi iconfont">&#xe619;</div>
+                            <p>打车</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon_hotel iconfont">&#xe619;</div>
+                            <p>酒店</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon_food iconfont">&#xe619;</div>
+                            <p>美食</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon_KTV iconfont">&#xe619;</div>
+                            <p>KTV</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon_bank iconfont">&#xe619;</div>
+                            <p>银行</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- 生活服务结束 -->
+        </div>
+        <!-- 中部主要内容再此处结束 -->
+        <!-- 开始底部的注脚设置 -->
+        <footer>
+            <p>使用百度前必读&nbsp;Baidu&nbsp;京ICP证030174号</p>
+        </footer>
+        <!-- 结束底部注脚设置 -->
+    </div>
+</body>
+
+</html>

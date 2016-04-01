@@ -1,0 +1,502 @@
+/*我的自定义css样式表*/
+
+
+/*================全局样式==================*/
+
+.container {
+    /*设置真个页面的包裹容器*/
+    width: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    min-width: 1200px;
+    font-family: arial;
+    font-size: 12px;
+}
+
+ul {
+    /*清楚ul标签的边距*/
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+.top_bar,
+.wrap_secbar,
+.wrap_article {
+    /*通顶条中内容设置宽度和居中*/
+    /*改进设计思路，所有的块都是通两边的，所以后面的内容全都放在warp_article中*/
+    width: 1024px;
+    margin: 0 auto;
+}
+
+
+/*==================通顶条样式=====================*/
+
+.top_bar {
+    /*解除顶部条中内容浮动后没有高度的bug*/
+    height: 50px;
+}
+
+.welcome {
+    /*左上角的欢迎信息样式设置*/
+    color: #b5b5b5;
+    line-height: 50px;
+    float: left;
+}
+
+.top_bar nav {
+    /*顶部条中导航居右*/
+    float: right;
+}
+
+.top_bar nav ul li {
+    /*顶部条中导航内部内容水平排列，无装饰样式*/
+    float: left;
+}
+
+.top_bar nav ul li a {
+    /*顶部条中导航内连接默认样式*/
+    color: #b5b5b5;
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0 10px;
+}
+
+.top_bar nav ul li:nth-child(2) a {
+    /*a标签中间一个带上分隔符*/
+    border-left: 1px solid #b5b5b5;
+    border-right: 1px solid #b5b5b5;
+}
+
+.wrap_header {
+    /*最顶部的通顶条设置宽度，高度，背景色*/
+    width: 100%;
+    height: 630px;
+    background-color: #333;
+}
+
+.sec_bar {
+    /*中间通顶条给高度 给背景色 给北京图*/
+    height: 500px;
+    background: url("../images/header-bg.jpg") no-repeat;
+    background-position: center;
+}
+
+.wrap_nav {
+    height: 365px;
+    width: 171px;
+    background-color: #ecebeb;
+}
+
+.wrap_nav ul {
+    /*菜单全部居中对齐*/
+    text-align: center;
+    line-height: 42px;
+}
+
+.wrap_nav ul li {
+    /*一级li给背景图*/
+    background: url("../images/nav-bg.png");
+}
+
+.wrap_secbar img {
+    /*logo设置为块级元素 消除默认边距*/
+    display: block;
+}
+
+.wrap_nav li ul {
+    display: none;
+}
+
+.wrap_nav li:hover ul {
+    /*配合上面的样式实现二级菜单的隐藏*/
+    display: block;
+}
+
+.wrap_nav li:hover a {
+    /*所有菜单划过后连接变白色*/
+    color: #ffffff;
+}
+
+.wrap_nav li ul li {
+    /*主导航中二级菜单行高与背景色*/
+    background: #9a9a9a;
+    line-height: 30px;
+}
+
+.wrap_nav li:hover {
+    /*所有菜单划过后背景变灰*/
+    background: #9a9a9a;
+}
+
+.wrap_nav a:link,
+.wrap_nav a:active,
+.wrap_nav a:visited {
+    /*所有菜单无视点击和激活样式，默认颜色*/
+    font-size: 13px;
+    color: #181818;
+    text-decoration: none;
+}
+
+
+/*=================通顶第三行，搜索与关键字=======================*/
+
+.thr_bar {
+    height: 80px;
+    background: #ffffff;
+}
+
+.thr_bar .wrap_article p {
+    float: left;
+    padding-left: 20px;
+    margin: 0;
+    line-height: 80px;
+}
+
+.wrap_search {
+    float: right;
+    height: 80px;
+    line-height: 80px;
+    padding-right: 17px;
+    font-size: 0;
+}
+
+.wrap_search input[type="text"] {
+    height: 33px;
+    margin: 0;
+    padding: 0;
+    width: 218px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.wrap_search input[type="submit"] {
+    height: 37px;
+    width: 60px;
+    padding: 0;
+    vertical-align: middle;
+    background: url("../images/bt-bg.png");
+    border: none;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+
+/*====================第三行完事了==================*/
+
+
+/*=====================第四行 新品展示==================*/
+
+.product_new {
+    height: 385px;
+    background: #e6e6e6;
+}
+
+.product_new .wrap_article {
+    height: 385px;
+    padding-top: 40px;
+}
+
+.product_new .wrap_article ul li {
+    float: left;
+}
+
+.product_new .wrap_article ul li:nth-child(1) {
+    margin-right: 10px;
+}
+
+.product_new .wrap_article ul li:nth-child(2) {
+    margin-right: 10px;
+}
+
+.product_new .wrap_article ul li:nth-child(3) {
+    margin-right: 10px;
+}
+
+.product_new .wrap_article ul li a {
+    display: block;
+    text-align: center;
+    line-height: 48px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #ffffff;
+    height: 48px;
+    width: 245px;
+    background: #333;
+}
+
+.product_new .wrap_article ul li a:hover {
+    background: url("../images/images/pro_bt_bg_03.png")repeat-x;
+}
+
+
+/*==============新品展示结束咯================*/
+
+
+/*===========热销产品==============*/
+
+.product_hot {
+    height: 540px;
+    background: #10943e;
+    /*text-align:center;*/
+}
+
+.product_hot .wrap_article {
+    background: #14b848;
+    height: 512px;
+    padding-top: 28px;
+    position: relative;
+    z-index: 10;
+    /*准备搞一下俩箭头*/
+}
+
+.wrap_hotsale_img,
+.wrap_aboutus_img,
+.wrap_news_img {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.product_hot .wrap_article ul {
+    margin: 0 65px;
+}
+
+.product_hot .wrap_article ul li {
+    float: left;
+}
+
+.product_hot .wrap_article ul li:nth-child(2) {
+    /*只给第二个元素设置左右外边距*/
+    margin: 0 85px;
+}
+
+.product_hot .wrap_article p {
+    /*设置热销中产品名称的样式*/
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    margin: 15px 0 6px;
+}
+
+.product_hot .wrap_article li a {
+    /*设置热销中连接的样式*/
+    display: block;
+    text-align: center;
+    line-height: 20px;
+    width: 100px;
+    height: 20px;
+    background: #fff;
+    border-radius: 3px;
+    margin-left: 70px;
+    text-decoration: none;
+}
+
+.product_hot.wrap_article {
+    position: relative;
+    /*z-index: 2;*/
+}
+
+.arr_left,
+.arr_right {
+    display: block;
+    height: 150px;
+    width: 75px;
+    background-color: #02c658;
+    position: absolute;
+    top: 200px;
+    z-index: -1;
+}
+
+.arr_left {
+    left: -75px;
+    border-radius: 150px 0px 0px 150px;
+}
+
+.arr_left img {
+    position: absolute;
+    top: 60px;
+    left: 40px;
+}
+
+.arr_right img {
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    transform-origin: center center;
+    transform: rotate(180deg);
+    -webkit-transform-origin: center center;
+    -webkit-transform: rotate(180deg);
+    -moz-transform-origin: center center;
+    -moz-transform: rotate(180deg);
+}
+
+.arr_right {
+    right: -75px;
+    border-radius: 0px 150px 150px 0px;
+}
+
+
+/*=============热销结束=================*/
+
+.wrap_aboutus {
+    height: 475px;
+}
+
+.wrap_aboutus_img {
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+
+.fac_pic,
+.cont_aboutus {
+    float: left;
+    width: 50%;
+}
+
+.cont_aboutus {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+
+/*关于我们也结束了*/
+
+
+/*新闻中心*/
+
+.wrap_news {
+    height: 840px;
+    background: #e6e6e6;
+}
+
+.wrap_news .wrap_article {
+    padding-top: 40px;
+}
+
+.sec_news {
+    float: left;
+    height: 240px;
+    margin-top: 10px;
+}
+
+.sec_news:nth-child(2n+1) {
+    margin-left: 64px;
+}
+
+.sec_news ul {
+    font-size: 14px;
+    margin-left: 100px;
+    clear: both;
+}
+
+.sec_news ul li {
+    list-style: disc;
+}
+
+.wrap_news_header_text {
+	position:absolute;
+    height: 150px;
+    width: 150px;
+    background: #14b845;
+    float: left;
+    color: #fff;
+    transition:all 0.5s ease-out 0.1s;
+}
+
+.wrap_news_header_text h2 {
+    width: 80px;
+    font-size: 75px;
+    margin: 20px auto 5px;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    line-height: 70px;
+}
+
+.wrap_news_header_text p {
+    padding-left: 20px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    line-height: 14px;
+    font-size: 13px;
+}
+
+.wrap_news_header_img {
+	padding-left:150px;
+    float: left;
+}
+.wrap_news_header:hover .wrap_news_header_text{
+	/*position: absolute;*/
+	width:480px;
+    background: rgba(20,184,69,0.6);
+
+}
+
+.sec_news ul li a,
+.sec_news ul li a:visited,
+.sec_news ul li a:link {
+    text-decoration: none;
+    color: #333;
+}
+.sec_news ul li a:hover{
+	color: #7F7F7F;
+}
+
+
+/*终于到最底下了*/
+
+.wrap_footer {
+    height: 525px;
+    background: url("../images/footer-bg_34.jpg");
+}
+
+.wrap_footer .wrap_article {
+    padding-top: 50px;
+}
+
+footer h2 {
+    color: #fff;
+}
+
+footer ul {
+    text-align: center;
+}
+
+footer ul li {
+    line-height: 30px;
+}
+
+.wrap_foo_con {
+    float: left;
+    margin-right: 130px;
+}
+
+.wrap_article .wrap_foo_con:nth-child(4) {
+    margin: 0;
+}
+
+.wrap_foo_con a,
+.wrap_foo_con p {
+    font-size: 13px;
+    color: #a8a8a8;
+}
+
+.wrap_foo_con a {
+    text-decoration: none;
+}
+
+.weixin a {
+    display: block;
+    clear: both;
+    margin: 278px auto 0;
+    width: 180px;
+    height: 40px;
+    color: #fff;
+    text-decoration: none;
+    background: #32a600;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+}
