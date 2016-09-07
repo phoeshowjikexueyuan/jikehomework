@@ -1,0 +1,48 @@
+#split-page ,
+#split-page *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+#split-page{
+	margin: 25px 0 0;
+	padding-bottom: 30px;
+}
+
+#split-page div,
+#split-page ul,
+#split-page li{
+	display: inline-block;
+	margin: 0 2px;
+}
+
+#split-page ul a{
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+#split-page a{
+	display: block;
+	height: 28px;
+	line-height: 28px;
+	padding: 0 10px;
+	background: #fff;
+	border: 1px solid #D5D5D5;
+}
+#split-page a:hover{
+	border: 1px solid #45bb65;
+	color: #45bb65;
+}
+#split-page div[data-sp="direct"] input{
+	width: 20px;
+}
+#split-page div[data-sp="direct"] button{
+	width: 30px;
+	border: 1px solid #d5d5d5;
+	background: #fff;
+	margin-left: 15px;
+	height: 20px;
+}

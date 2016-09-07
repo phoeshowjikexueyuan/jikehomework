@@ -1,0 +1,570 @@
+header{
+	height: 60px;
+	border-bottom: 1px solid #eaeaea;
+	background: #fff;
+	position: relative;
+	z-index: 600;
+}
+
+.container{
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.logo{
+	height: 60px;
+	float: left;
+}
+
+.logo a{
+	display: block;
+	height: 60px;
+	line-height: 60px;
+}
+.logo img{
+	vertical-align: middle;
+}
+
+header nav{
+	float: left;
+	margin-left: 60px;
+}
+.main-nav>li{
+	display: inline-block;
+	position: relative;
+	height: 60px;
+	line-height: 60px;
+	margin-right: 50px;
+}
+
+
+.main-nav>li ul{
+	position: absolute;
+	width: 280px;
+	background: #fff;
+	font-size: 14px;
+	line-height: 40px;
+	display: none;
+	opacity: 0;
+}
+
+.main-nav>li ul li{
+	padding: 0 10px;
+}
+.divsion{
+	background: #f9f9f9;
+}
+.nav-link li:hover{
+	background: #f9f9f9;
+}
+
+.nav-link li:hover a{
+	color: #45bb65;
+}
+.main-nav>li:hover ul{
+	display: block;
+	animation: navshow 1s forwards;
+}
+@keyframes navshow{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.rotate_arrow{
+	display: inline-block;
+	position: relative;
+	left: 7px;
+	top: -2px;
+
+	border-bottom: 1px solid #aaa;
+	border-right: 1px solid #aaa;
+	height: 7px;
+	width: 7px;
+
+	transform: rotate(45deg);
+}
+
+.main-nav>li:hover .rotate_arrow{
+	border-color: #45bb65;
+	animation: arrowrotate 1s forwards;
+
+}
+
+@keyframes arrowrotate {
+	0%{
+		transform: rotate(-135deg);
+	}
+	100%{
+		transform: rotate(225deg);
+	}
+}
+/* user区域 */
+.user{
+	float: right;
+}
+
+.user>li{
+	display: inline-block;
+	position: relative;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 5px 0 20px;
+}
+
+.user>li ul{
+	line-height: 30px;
+	position: absolute;
+	width: 100px;
+	background: #fff;
+	right: 0;
+	font-size: 12px;
+	display: none;
+}
+.user-info:hover ul,
+.app:hover div{
+	display: block;
+	animation: navshow 1s forwards;
+}
+.user>li ul::before,
+.qr::before{
+	content: "";
+	position: absolute;
+	
+	top: -9px;
+	right: 10px;
+
+
+	height: 15px;
+	width: 15px;
+	border-top: 1px solid #eaeaea;
+	border-left: 1px solid #eaeaea;
+
+	background: #fff;
+	transform: rotate(45deg);
+}
+.qr::before{
+	left: 50px;
+}
+
+.user>li:hover i{
+	color: #45bb65;
+}
+
+.qr{
+	position: absolute;
+	transform: translate(-50px, 0);
+	display: none;
+}
+
+/* 页面中心内容 */
+section{
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+
+aside{
+	float: left;
+	width: 210px;
+	background: #fff;
+	border: 1px solid #45bb65;
+	position: relative;
+	z-index: 500;
+}
+
+article{
+	margin-left: 224px;
+	/* background: #fff; */
+	/* height: 100px; */
+	position: relative;
+}
+
+/* aside 侧边菜单 */
+
+aside h2{
+	font-size: 15px;
+	font-weight: normal;
+	color: #45bb65;
+	padding: 15px 10px;
+	border-bottom: 1px solid #eaeaea;
+}
+aside ul{
+	font-size: 14px;
+	color: #595959;
+	position: relative;
+}
+
+aside ul li{
+	height: 36px;
+}
+aside ul li a{
+	display: block;
+	position: absolute;
+
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+	border-bottom: 1px solid #f5f5f5;
+	padding-left: 30px;
+	background: #fff;
+
+}
+aside li:hover dl{
+	display: block;
+}
+aside ul>li:hover a{
+	color: #45bb65;
+	font-weight: bold;
+	z-index: 500;
+	left: 1px;
+
+	border-top: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+	box-shadow: 0 3px 3px 0  rgba(0, 0, 0, .05);
+}
+aside dl{
+	display: none;
+	position: absolute;
+	left: 208px;
+	top: -54px;
+	background: #fff;
+	width: 350px;
+	border: 1px solid #eaeaea;
+	min-height: 350px;
+	padding: 15px;
+	box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, .05);
+}
+
+aside dl dt{
+	border-bottom: 1px solid #eaeaea;
+	padding: 0 0 10px;
+}
+
+.course-type{
+	position: absolute;
+	z-index: 300;
+	background: #fff;
+	height: 38px;
+	width: 100%;
+}
+
+.course-type dl{
+	position: relative;
+	float: left;
+	line-height: 38px;
+	font-size: 14px;
+	background: #fff;
+	margin-right: 2px;
+}
+.course-type dd{
+	display: none;
+	text-align: center;
+}
+
+.course-type dl:hover{
+	box-shadow: 1px 1px 2px 1px rgba(0,0,0,.1);
+}
+.course-type dl:hover dd{
+	display: block;
+}
+.course-type dt{
+	height: 38px;
+	padding: 0 20px;
+}
+
+/* blist情况下的 显示效果 */
+.courses-wrap{
+	padding-top: 51px;
+}
+.blist .course-wrap{
+	float: left;
+	height: 225px;
+	width: 250px;
+	background: #fff;
+	margin: 0 13px 13px 0;
+	position: relative;
+}
+.blist .course-info{
+	position: absolute;
+	width: 100%;
+	background: #fff;
+}
+.blist .course-wrap:hover .cmask{
+	opacity: 1;
+}
+/* img height:135; other:90; */
+.blist .course-wrap:nth-child(3n+3){
+	margin-right: 0;
+}
+
+.blist .cimg{
+	height: 135px;
+	overflow: hidden;
+	position: relative;
+	z-index: 100;
+}
+.blist .cmask{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-image: url('../image/player_icon_5c67475.png');
+	background-color: rgba(0, 0, 0, .4);
+	background-repeat: no-repeat;
+	background-size: 40px;
+	background-position: center;
+	opacity: 0;
+	transition: opacity .3s linear;
+}
+
+.blist .c-info{
+	position: relative;
+	z-index: 200;
+	padding: 8px 14px 0;
+	background: #fff;
+	color: #939393;
+	height: 88px;
+	overflow: hidden;
+	transition: height .3s linear;
+}
+.blist .course-info:hover .c-info{
+	height: 180px;
+}
+.blist .course-info:hover .c-des{
+	height: 64px;
+	opacity: 1;
+}
+.blist .course-info:hover .lf p:nth-child(2),
+.blist .course-info:hover .rf p:nth-child(1){
+	display: block;
+}
+.blist .c-info h3{
+	font-size: 16px;
+	font-weight: normal;
+	margin: 0 0 8px;
+}
+.blist .c-info p{
+	font-size: 14px;
+	/* margin: 5px 0; */
+}
+.blist .rf,
+.blist .lf{
+	float: left;
+	width: 50%;
+}
+.blist .rf{
+	text-align: right;
+}
+.blist .c-des{
+	margin-bottom: 5px;
+	height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: all .3s linear;
+}
+/* 172px */
+.blist .lf p:nth-child(2),
+.blist .rf p:nth-child(1){
+	display: none;
+}
+
+
+
+/* hlist style 列表效果 */
+.hlist .course-wrap{
+	width: 100%;
+	background: #fff;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+
+.hlist .cimg,
+.hlist .c-info{
+	float: left;
+}
+.hlist .cimg{
+	width: 25%;
+	height: 100px;
+	overflow: hidden;
+	position: relative;
+}
+.hlist .c-info{
+	width: 75%;
+	padding: 10px 15px;
+}
+.hlist .lf p{
+	display: inline-block;
+	font-size: 12px;
+	margin-top: 10px;
+	color: #4C4C4C;
+}
+.hlist .lf{
+	float: left;
+}
+.hlist .rf{
+	float: right;
+	position: relative;
+}
+.hlist .rf p{
+	font-size: 12px;
+	margin-top: 10px;
+	color: #4c4c4c;
+}
+.hlist .rf p:nth-child(2){
+	position: absolute;
+	top: -65px;
+	right: 5px;
+}
+.hlist h3{
+	font-size: 16px;
+	color: #4C4C4C;
+	font-weight: normal;
+}
+.hlist .c-des{
+	font-size: 14px;
+}
+.hlist .cmask{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .4);
+	background-image: url("../image/player_icon_5c67475.png");
+	background-repeat: no-repeat;
+	background-size: 40px;
+	background-position: center;
+	opacity: 0;
+	transition: opacity .3s linear;
+}
+.hlist .cimg:hover .cmask{
+	opacity: 1;
+}
+
+
+footer{
+	height: 260px;
+	background: #fff;
+}
+
+
+
+/* switcher */
+ .list-switch{
+ 	float: right;
+ 	height: 100%;
+ }
+
+ .list-switch label{
+ 	display: inline-block;
+ 	height: 100%;
+ 	padding: 0 10px;
+ 	border-left: 1px solid #f3f3f3;
+ }
+
+.list-switch .iconfont{
+	font-size: 18px;
+	display: block;
+	height: 38px;
+	line-height: 38px;
+	color: #cdcdcd;
+}
+
+.list-switch input{
+	display: none;
+}
+
+/* 回到顶部 */
+
+.totop{
+	position: fixed;
+	left: 50%;
+	bottom: 100px;
+	margin-left: 500px;
+	background: #e6e6e6;
+	text-align: center;
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+}
+.totop .iconfont{
+	color: #B3B3B3;
+}
+
+
+/* 搜索条的样式 */
+
+.searchbar{
+	position: absolute;
+	right: 0;
+	display: none;
+	opacity: 0;
+	transform-origin: right;
+	transform: scale(0.1,1);
+	height: 59px;
+	width: 850px;
+	background: #fff;
+	line-height: 60px;
+	transition: all .5s ease;
+
+}
+.searchbar button{
+	border: none;
+	background: none;
+	height: 30px;
+	width: 50px;
+}
+.searchbar button .iconfont{
+	font-size: 20px;
+	color: #D8D8D8;
+	cursor: pointer;
+}
+.searchbar button .iconfont:hover{
+	color: #45bb65;
+}
+.searchbar input{
+	width: 600px;
+	border: none;
+	height: 30px;
+	padding-left: 10px;
+	font-size: 12px;
+}
+.searchbar input:focus{
+	outline-style: none;
+}
+.searchbar span.iconfont{
+	position: absolute;
+	right: 20px;
+	font-size: 20px;
+	color: #B3B3B3;
+
+}
+.searchbar-show{
+	display: block;
+	animation: searchbarshow .5s ease forwards;
+}
+@keyframes searchbarshow{
+	0%{
+		opacity: 0;
+		transform: scale(0.1,1);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1,1);
+	}
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
