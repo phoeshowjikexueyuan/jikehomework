@@ -1,4 +1,5 @@
-html{
+html,
+body{
 	height:100%;
 }
 body{
@@ -232,7 +233,7 @@ aside>a{
 	height:36px;
 	background:#398bfb;
 }
-aside>a.hover{
+aside:hover >a{
 	color:#111;
 	background:#f9f9f9;
 }
@@ -244,6 +245,13 @@ aside>a h1{
 aside ul{
 	text-align:center;
 	display:none;
+}
+aside:hover ul{
+	display: block;
+}
+aside:hover{
+	background:#f9f9f9;
+	height: 100%; 
 }
 aside ul img{
 	width:40px;

@@ -2,33 +2,25 @@
 天气情况的弹出框
  */
 $(document).ready(function(){
-	$(".weather").mouseenter(function(){
-		var t=setTimeout(function(){
+	var t = null;
+	$(".weather").hover(function(){
+		t=setTimeout(function(){
 			$(".future_temper_wrap").show();
 		},500);
-	}).mouseleave(function(){
-			$(".future_temper_wrap").hide();
+	},function(){
+		clearTimeout(t);
+		$(".future_temper_wrap").hide();
 	});
 });
 /*
 侧边栏的弹出框
  */
 $(document).ready(function(){
-	var windowHeight=$("html").height();
-	console.log(windowHeight);
-	$("aside").mouseenter(function(){
-		$(this).height(windowHeight).find("ul").fadeIn(100);
-		$(this).children("a").addClass("hover");
-		// 设置myevent，不然滚动的时候别的效果没有了
-		$(window).on("scroll.myevent",function(){
-			$(this).scrollTop(0);
-		});
-
-	}).mouseleave(function(){
-		$(this).height(36).find("ul").hide();
-		$(this).children("a").removeClass("hover");
-		// 解绑自定滚动事件，继续滚动
-		$(window).unbind("scroll.myevent");
+	
+	$("aside").hover(function(){
+		$('body').css({'overflow':'hidden'});
+	},function(){
+		$('body').css({'overflow':'scroll'});
 	});
 });
 /*
@@ -85,6 +77,7 @@ $(document).ready(function(){
 			localStorage.skin=index;
 		});
 	});
+
 });
 
 
