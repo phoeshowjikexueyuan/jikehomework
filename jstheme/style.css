@@ -1,308 +1,83 @@
-/*-----------清除默认样式-----------*/
-body, ul {
-    margin: 0;
-    padding: 0;
+/* body 中的class  pink purple blue green 四种风格 */
 
-}
-body{
-    min-width: 960px;
-}
-
-h1 {
-    margin-top: 10px;
-}
-
-h2 {
-    padding-bottom: 10px;
-    font-size: 17px;
-    border-bottom: 1px dashed #dddddd;
-}
-
-body {
-    background: #eeeeee;
-    font-family: Arial;
-    font-size: 14px;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:link, a:visited {
-    color: #2f2f2f;
-}
-
-/*---------清除默认样式结束-----------*/
-
-#container {
-    width: 960px;
-    margin: 0 auto;
-}
-
-/*----------header设置--------------*/
-header {
-    height: 30px;
-    background: #444444;
-    width: 100%;
-}
-
-header nav {
-    height: 30px;
-    width: 960px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.nav_bar {
-    float: left;
-    height: 30px;
-}
-
-.nav_bar li, .theme_switch li, .wrap_search li {
-    float: left;
-    margin-right: 20px;
-    font-size: 14px;
-    line-height: 28px;
-}
-
-.theme_switch {
-    /*float: right;*/
-    position: absolute;
-    right: 0;
-    width: 200px;
-    height: 30px;
-}
-
-.theme_switch a {
-    display: block;
-    height: 15px;
-    width: 15px;
-    background-color: #eee;
-    margin-top: 7px;
-}
-
-/*.def_theme .nav_bar a{*/
-/*color: #ffaa00;*/
-/*}*/
-
-.panel {
-    border: 1px solid #dddddd;
-    margin-top: 15px;
-    background: #fff;
-    padding: 20px 30px;
-}
-
-.panel_top {
-    height: 50px;
-}
-
-.wrap_header {
-    width: 600px;
-    margin: 0 auto;
-}
-
-.wrap_logo, .wrap_search {
-    float: left;
-}
-
-.logo {
-    display: block;
-    width: 88px;
-    height: 31px;
-    background: url("img/icons.png") 0 0 no-repeat;
-}
-
-.wrap_logo h1 {
-    margin-right: 20px;
-}
-
-.wrap_search input {
-    box-sizing: border-box;
-    border:1px solid #888888;
-    width: 380px;
-    height: 30px;
-}
-
-.wrap_search button {
-    box-sizing: border-box;
-    height: 30px;
-    width: 60px;
-
-}
-
-.panel_fav, .panel_news {
-    float: left;
-}
-
-.panel_fav {
-    width: 570px;
-    margin-right: 15px;
-}
-
-.panel_fav li {
-    float: left;
-    width: 14%;
-    text-align: center;
-}
-
-.fav_first {
-    border-bottom: 1px dashed #dddddd;
-    height: 45px;
-}
-
-.fav_second {
-    margin-top: 20px;
-}
-
-.fav_second li {
-    line-height: 30px;
-}
-
-.panel_news {
-    width: 250px;
-}
-
-.panel_news li {
-    line-height: 40px;
-}
-
-/*======开始设置不同主题下的颜色=======*/
-/*主题选择器颜色设置*/
-#basic{
-    background: #ff9900;
-}
-#pink{
-    background: #cc0066;
-}
-#green{
-    background: #669900;
-}
-#yellow{
-    background: #cccc00;
-}
-#blue{
-    background: #0099ff;
-}
-/*基础款颜色*/
-.basic .nav_bar a, .basic .nav_bar a:link, .basic .nav_bar a:visited {
-    color: #ff9900;
-}
-
-.basic .nav_bar li:hover {
-    border-bottom: 2px solid #ff9900;
-}
-
-.basic .panel {
-    border-top: 2px solid #ff9900;
-}
-
-.basic .wrap_search button {
-    background: #ff9900;
-    border: #ff9900;
-    color: #fff;
-}
-
-.basic .panel_fav a:hover, .basic .panel_news a:hover {
-    text-decoration: underline;
-    color: #ff9900;
-}
-
-/*粉红色*/
-.pink .nav_bar a, .pink .nav_bar a:link, .pink .nav_bar a:visited {
-    color: #ff00ff;
-}
-
-.pink .nav_bar li:hover {
-    border-bottom: 2px solid #cc0066;
-}
-
-.pink .panel {
-    border-top: 2px solid #cc0066;
-}
-
-.pink .wrap_search button {
-    background: #cc0066;
-    border: #cc0066;
-    color: #fff;
-}
-
-.pink .panel_fav a:hover, .pink .panel_news a:hover {
-    text-decoration: underline;
-    color: #cc0066;
-}
-/*果绿色*/
-.green .nav_bar a, .green .nav_bar a:link, .green .nav_bar a:visited {
-    color: #669900;
-}
-
-.green .nav_bar li:hover {
-    border-bottom: 2px solid #669900;
-}
-
-.green .panel {
-    border-top: 2px solid #669900;
-}
-
-.green .wrap_search button {
-    background: #669900;
-    border: #669900;
-    color: #fff;
-}
-
-.green .panel_fav a:hover, .green .panel_news a:hover {
-    text-decoration: underline;
-    color: #669900;
-}
-/*黄色*/
-.yellow .nav_bar a, .yellow .nav_bar a:link, .yellow .nav_bar a:visited {
-    color: #cccc00;
-}
-
-.yellow .nav_bar li:hover {
-    border-bottom: 2px solid #cccc00;
-}
-
-.yellow .panel {
-    border-top: 2px solid #cccc00;
-}
-
-.yellow .wrap_search button {
-    background: #cccc00;
-    border: #cccc00;
-    color: #fff;
-}
-
-.yellow .panel_fav a:hover, .yellow .panel_news a:hover {
-    text-decoration: underline;
-    color: #cccc00;
-}
-
-/*蓝色*/
-.blue .nav_bar a, .blue .nav_bar a:link, .blue .nav_bar a:visited {
-    color: #0099ff;
-}
-
-.blue .nav_bar li:hover {
-    border-bottom: 2px solid #0099ff;
-}
-
-.blue .panel {
-    border-top: 2px solid #0099ff;
-}
-
-.blue .wrap_search button {
-    background: #0099ff;
-    border: #0099ff;
-    color: #fff;
-}
-
-.blue .panel_fav a:hover, .blue .panel_news a:hover {
-    text-decoration: underline;
-    color: #0099ff ;
-}
+/* .bs=border-style */
+/* .bgs=background-style */
+/* .active 还是原来的active */
 
 
+
+/* pink style */
+.pink #sethome{
+	background: #ff6666;
+}
+.pink a:hover{
+	color: #ff6666;
+}
+
+.pink .bs{
+	border-color: #ff6666;
+}
+.pink .bgs{
+	background-color: #ff6666;
+}
+.pink .active{
+	background-color: #ff6666;
+	color: #fff;
+}
+
+/* purple style */
+.purple #sethome{
+	background: #6666FF;
+}
+.purple a:hover{
+	color: #6666FF;
+}
+
+.purple .bs{
+	border-color: #6666FF;
+}
+.purple .bgs{
+	background-color: #6666FF;
+}
+.purple .active{
+	background-color: #6666FF;
+	color: #fff;
+}
+
+/* blue style */
+.blue #sethome{
+	background: #0080FF;
+}
+.blue a:hover{
+	color: #0080FF;
+}
+
+.blue .bs{
+	border-color: #0080FF;
+}
+.blue .bgs{
+	background-color: #0080FF;
+}
+.blue .active{
+	background-color: #0080FF;
+	color: #fff;
+}
+
+/* green style */
+.green #sethome{
+	background: #0BA15D;
+}
+.green a:hover{
+	color: #0BA15D;
+}
+
+.green .bs{
+	border-color: #0BA15D;
+}
+.green .bgs{
+	background-color: #0BA15D;
+}
+.green .active{
+	background-color: #0BA15D;
+	color: #fff;
+}

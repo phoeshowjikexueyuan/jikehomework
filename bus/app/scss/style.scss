@@ -1,0 +1,122 @@
+$redcolor:#da0000;
+$greencolor:#209500;
+$whitecolor:#fff;
+$backgroundcolor:#fcfcfc;
+$cur-color:#fff710;
+//站牌宽度
+$panel-width:60rem;
+
+html{
+	font-size:62.5%;
+	font-family: Aril, sans-serif;
+}
+
+body{
+	background:#e4e4e4;
+	
+	//站牌的尺寸和颜色
+	.plate{
+		background:$backgroundcolor;
+		width:$panel-width;
+		margin:10rem auto;
+	}
+	//车路号
+	h1{
+		float:left;
+		color:$whitecolor;
+		font-size:8rem;
+		margin:4rem 0;
+		width:$panel-width*0.4;
+		background-color:$redcolor;
+		text-align:center;
+		padding:1rem 0;
+		span{
+			font-size:5rem;
+		}
+	}
+	// 路线信息
+	.path-info{
+		float:left;
+		text-align:center;
+		width:$panel-width*0.6;
+		margin-top:4rem;
+		// 区间
+		.section{
+			font-size:2rem;
+			color:$greencolor;
+			font-size:2.5rem;
+		}
+		// 下一站
+		.next{
+			clear:both;
+			font-size:2rem;
+		}
+
+	}
+	// 当前站点
+	h2{
+		font-size:3rem;
+		margin:0;
+		color:$redcolor;
+	}
+	// 沿途路线，有序列表
+	ol{
+		clear:both;
+		font-size:0;
+		list-style:none;
+		vertical-align: top;
+		height:11rem;
+		padding:0;
+		background-color:$greencolor;
+
+		li{
+			color:$whitecolor;
+			float:left;
+			font-size:1.5rem;
+			word-wrap:break-word;
+			width:1rem;
+			height:10rem;
+			//这个是用来计算站名之间的宽度的，减去站数除站数的2倍
+			margin:5px (($panel-width)-12)/24;
+			
+		}
+
+		.now{
+			color:$cur-color;
+		}
+	}
+	.bus-info{
+		// 票价和运行时间
+		width:$panel-width;
+		height:1rem;
+		padding:1rem 0;
+		border-bottom:8px solid $redcolor;
+		position: relative;
+		
+		p{
+			float:left;
+			text-align:center;
+			margin:0;
+			font-size:1.5rem;
+			width:$panel-width/2;//底部文本居中
+		}
+
+		&:after{
+			// 三角方向
+			content:"";
+			position: absolute;
+			width:0px;
+			height:0px;
+			border-right:45px solid $whitecolor;
+			border-left:0px;
+			border-bottom:16px solid $redcolor;
+			right:0;
+			bottom:-8px;
+
+		}
+	}
+
+		
+
+
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>公交站牌作业</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<!-- 车路次 h1 -->
+<!-- 本站 h2 -->
+
+<div class="plate">
+	<h1 class="bus-num">15<span>路</span></h1>
+	<div class="path-info">
+		<h2 class="station-name">本站：星云桥</h2>
+		<p class="section">望月堤----永和镇</p>
+		<p class="next">下一站：海军招待所</p>
+	</div>
+	<ol class="path">
+		<li>望月堤</li>
+		<li>星河公园</li>
+		<li>马莲庄</li>
+		<li>豆瓣学校</li>
+		<li>葵花宝典路</li>
+		<li>祁连山诊所</li>
+		<li>市十五中</li>
+		<li>泰和桥东</li>
+		<li>永和路南</li>
+		<li class="now">星云桥</li>
+		<li>海军招待所</li>
+		<li>永和镇</li>
+	</ol>
+	<div class="bus-info">
+		<p>服务时间：6:10-22:00</p><p>统一票价：1.5元</p>
+	</div>
+</div>
+	
+
+
+	<script type="text/javascript">
+		var lis=document.getElementsByTagName('li');
+		for(var i = 0;i < lis.length;i++){
+			var strlength=lis[i].innerHTML.length;
+			lis[i].setAttribute('style','line-height:' + 10/strlength +'rem');
+		};
+	</script>
+</body>
+</html>
