@@ -1,18 +1,20 @@
 {
-  "name": "node_baidu_news",
-  "version": "0.0.1",
-  "description": "node版本的百度新闻应用",
-  "main": "app.js",
+  "name": "nodebaidu",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "author": "phoeshow",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.15.0",
-    "ejs": "*",
-    "express": "^4.13.4",
-    "moment": "^2.12.0",
-    "mysql": "*"
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "ejs": "~2.4.1",
+    "express": "~4.13.4",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "mysql": "^2.11.1"
   }
 }
